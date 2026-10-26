@@ -12,3 +12,6 @@ learning_log/
 
 # macOS
 .DS_Store
+
+# ローカルの学習原本。提出用 answer.md は含めない。
+.logs/

@@ -1,0 +1,13 @@
+{
+  "checked_on": "2026-10-26",
+  "source": "https://aistudio.google.com/rate-limit",
+  "tier": "無料枠",
+  "comparison_models": ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"],
+  "comparison_change": "旧比較相手のgemini-3.8-flashで503（混雑）と504（タイムアウト）を記録したため、無料枠を確認したgemini-3.1-flash-liteへ変更。旧モデルの失敗記録は保持する。実行中の自動モデル切替は行わない。",
+  "models": {
+    "gemini-3.5-flash-lite": {"rpm": 15, "tpm": 250000, "rpd": 500},
+    "gemini-3.1-flash-lite": {"rpm": 15, "tpm": 250000, "rpd": 500},
+    "gemini-3.8-flash": {"rpm": 5, "tpm": 250000, "rpd": 20}
+  },
+  "note": "本人のAI Studio画面で確認したスナップショット。プロジェクトや日付で変わる。APIキーやプロジェクトIDは保存しない。"
+}
