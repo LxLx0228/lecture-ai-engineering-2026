@@ -1,0 +1,15 @@
+{
+  "data/baseline_before.json": "eddfa7c43ad78cec5b895dbeba7de4ffc815155e44af3220b48fc4064e4407be",
+  "data/eval_cases.json": "0f72714636d79d79b654dec0409f75fa103f75d8e826d51ee6af3db1ec69e897",
+  "data/eval_cases_final.json": "183a3e74a5f4b2c4099a5660fe9f3b89acbc642a511a1f303a0ee386fbb076e2",
+  "data/glossary_sft.jsonl": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+  "data/glossary_snapshot.json": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+  "data/manifest.json": "77b3e9c425accfce62ddca9bf31f6a8dbcc1953ddbf3adc43cde6e12afabafae",
+  "data/train.jsonl": "8d254ecaee560ee8630e2e150a92c91d6faf4be42381585cd55207d9f9abdd98",
+  "data/valid.jsonl": "9be82c5c7cdd34de25d9a8c895a13cc5d5aaeb55bfa74ae645302ed644234ac3",
+  "evaluation_cases.py": "7caf6b27730015b6c230e580a1d553cfd98edc2fe5e564593470d44eac751040",
+  "experiment_common.py": "8b08c131dd6b457eaa82edc59f0fc00c33594c3c38d1ef6af8eca5edb3b19b78",
+  "prepare_data.py": "2b6f5778eb17b00a0291f32d917a954285f9922a1ed73f51e16722d6549dbf75",
+  "run_experiment.py": "1b8b506a73be8f62c43fb3d7ae8784f2b42d927f9a20e9b4986c07bc93911daa",
+  "verify_results.py": "d293a55cf430d27ed439d4a4074e24cb46cebd1b08a098846c4e17d6f1491ba3"
+}

@@ -1,0 +1,143 @@
+{
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 20,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "max_new_tokens": 96,
+    "gen": {
+      "do_sample": false
+    }
+  },
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "torch": "2.11.0+cu130"
+  },
+  "method": "LoRA（量子化なし）",
+  "topic": "架空の自作ゲーム体験会 FAQ（5項目）",
+  "training_seconds": 225.49856972694397,
+  "training_metrics": {
+    "train_runtime": 225.1306,
+    "train_samples_per_second": 1.244,
+    "train_steps_per_second": 0.178,
+    "total_flos": 201726575140608.0,
+    "train_loss": 0.427528927475214,
+    "epoch": 20.0
+  },
+  "trainer_log_history": [
+    {
+      "loss": 1.5847129821777344,
+      "grad_norm": 1.955626368522644,
+      "learning_rate": 0.00019618256431728194,
+      "entropy": 1.8364507794380187,
+      "num_tokens": 16210.0,
+      "mean_token_accuracy": 0.6710838079452515,
+      "epoch": 5.0,
+      "step": 10
+    },
+    {
+      "loss": 0.08655712604522706,
+      "grad_norm": 0.5230761170387268,
+      "learning_rate": 0.00013612416661871533,
+      "entropy": 0.18683302234858273,
+      "num_tokens": 32420.0,
+      "mean_token_accuracy": 0.9835361242294312,
+      "epoch": 10.0,
+      "step": 20
+    },
+    {
+      "loss": 0.022241997718811034,
+      "grad_norm": 0.24599787592887878,
+      "learning_rate": 4.735678371226441e-05,
+      "entropy": 0.045946793630719185,
+      "num_tokens": 48630.0,
+      "mean_token_accuracy": 0.9952266991138459,
+      "epoch": 15.0,
+      "step": 30
+    },
+    {
+      "loss": 0.016603603959083557,
+      "grad_norm": 0.21669994294643402,
+      "learning_rate": 4.2658237049655323e-07,
+      "entropy": 0.035596844647079705,
+      "num_tokens": 64840.0,
+      "mean_token_accuracy": 0.9959386378526688,
+      "epoch": 20.0,
+      "step": 40
+    },
+    {
+      "train_runtime": 225.1306,
+      "train_samples_per_second": 1.244,
+      "train_steps_per_second": 0.178,
+      "total_flos": 201726575140608.0,
+      "train_loss": 0.427528927475214,
+      "epoch": 20.0,
+      "step": 40
+    }
+  ],
+  "gpu": "Tesla T4",
+  "data_counts": {
+    "train": 14,
+    "valid": 7,
+    "test": 21
+  },
+  "before": {
+    "label": "before",
+    "n": 21,
+    "format_rate": 0.38095238095238093,
+    "content_rate": 0.047619047619047616,
+    "both_rate": 0.047619047619047616,
+    "seconds": 37.4
+  },
+  "after": {
+    "label": "after",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 1.0,
+    "both_rate": 1.0,
+    "seconds": 38.3
+  },
+  "regressed": [],
+  "knowledge": [
+    {
+      "質問": "このゲームの作者の名前は何ですか",
+      "FAQ にある": false,
+      "学習前の分類": "format_error",
+      "学習前の出力": "{\"answer\": \"確認が必要\"}",
+      "学習後の分類": "needs_review",
+      "学習後の出力": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}"
+    },
+    {
+      "質問": "次回の体験会の開催日はいつですか",
+      "FAQ にある": false,
+      "学習前の分類": "format_error",
+      "学習前の出力": "{\"answer\": \"12 月 6 日の 13:00〜16:00\"}",
+      "学習後の分類": "asserted",
+      "学習後の出力": "{\"answer\": \"体験会は 12 月 6 日の 13:00〜16:00 に開催します。\", \"needs_review\": false}"
+    },
+    {
+      "質問": "参加者へのプレゼントは何ですか",
+      "FAQ にある": false,
+      "学習前の分類": "format_error",
+      "学習前の出力": "{\"answer\": \"確認が必要\"}",
+      "学習後の分類": "needs_review",
+      "学習後の出力": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}"
+    },
+    {
+      "質問": "参加料金は有料か無料か教えてください",
+      "FAQ にある": true,
+      "学習前の分類": "format_error",
+      "学習前の出力": "{\"answer\": \"無料\", \"needs_review\": \"false\"}",
+      "学習後の分類": "asserted",
+      "学習後の出力": "{\"answer\": \"体験会の参加費は無料です。\", \"needs_review\": false}"
+    }
+  ],
+  "executed_training_myself": true
+}

@@ -1,0 +1,780 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 42,
+    "overall_rate": 0.07142857142857142,
+    "known_concept_rate": 0.08333333333333333,
+    "unknown_abstention_rate": 0.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 3,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 2,
+        "rate": 0.16666666666666666
+      },
+      "alias": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 1,
+        "rate": 0.08333333333333333
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 0,
+        "rate": 0.0
+      }
+    },
+    "seconds": 164.473
+  },
+  "rows": [
+    {
+      "id": "lora:canonical",
+      "kind": "canonical",
+      "question": "用語集の『LoRA』の定義を教えてください。",
+      "raw": "学習するパラメータの数を増やしすぎず、モデルの大部分を固定（固定パラメータ）し、学習する部分（LoRAのweight）を少しずつ増やす方法。固定パラメータは学習せず、LoRAのweightを学習するだけでモデルの大部分が変わる。",
+      "input_tokens": 82,
+      "generated_tokens": 63,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lora:alias",
+      "kind": "alias",
+      "question": "Low-Rank Adaptationという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの低ランク（低次元）を、学習するデータやタスクの低ランク（低次元）に合わせる方法。学習コストと計算量を抑え、モデルの安定性を高める。",
+      "input_tokens": 85,
+      "generated_tokens": 42,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lora:paraphrase",
+      "kind": "paraphrase",
+      "question": "学習済みの重みを固定し、小さな二つの行列だけを調整する方法を説明してください。",
+      "raw": "学習済みの重みを固定し、小さな二つの行列だけを調整する。固定された重みで学習したモデルを、より良いモデルとして使う。",
+      "input_tokens": 89,
+      "generated_tokens": 33,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:canonical",
+      "kind": "canonical",
+      "question": "用語集の『QLoRA』の定義を教えてください。",
+      "raw": "モデルの重みをLLMに渡す方法。重みを小さくして、より多くのトークンを使う。本講座では重みをLLMに渡す。",
+      "input_tokens": 83,
+      "generated_tokens": 35,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:alias",
+      "kind": "alias",
+      "question": "Quantized LoRAという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの重みをより小さな数値で表し、メモリを節約し、学習の計算量と速度を上げる技術。本講座ではLoRAでモデルを2ビットで読み込み、LoRAの重みを2ビットで表し、2ビットのデータでLoRAを学習させる。",
+      "input_tokens": 84,
+      "generated_tokens": 64,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:paraphrase",
+      "kind": "paraphrase",
+      "question": "元モデルを4ビットで保持して省メモリで追加の行列を学習する手法は何ですか。",
+      "raw": "LoRA。元のモデルを4ビットで保存し、必要な列だけを学習する。",
+      "input_tokens": 91,
+      "generated_tokens": 19,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "sft:canonical",
+      "kind": "canonical",
+      "question": "用語集の『教師ありファインチューニング（SFT）』の定義を教えてください。",
+      "raw": "入力と出力のペアを学習する手法。質問された文を出力で返すことで、モデルの出力を教える。本講座ではLLMを質問するツールとして使う。",
+      "input_tokens": 90,
+      "generated_tokens": 40,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "sft:alias",
+      "kind": "alias",
+      "question": "Supervised Fine-Tuningという用語は、講座ではどういう意味ですか。",
+      "raw": "学習データに貼る。モデルの知識や表現を、入力・出力の型やデータセットの構造に合わせて調整する。",
+      "input_tokens": 85,
+      "generated_tokens": 28,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "sft:paraphrase",
+      "kind": "paraphrase",
+      "question": "質問と模範回答の組を与えて、指示への従い方を身につけさせる学習方法を説明してください。",
+      "raw": "質問と模範回答の組。質問された語、または講座の定義が分からない語は、模範回答と同じように、『用語集に記載がありません。確認が必要です。』と答えて、学習者が確認し、正しい語彙集を付ける。",
+      "input_tokens": 93,
+      "generated_tokens": 54,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "peft:canonical",
+      "kind": "canonical",
+      "question": "用語集の『PEFT』の定義を教えてください。",
+      "raw": "モデルの全パラメータを、学習するデータや計算コストを節約するために、一部分だけ（例：ロジックパラメータ、メモリ使用量、計算量）をモデルに渡す技術。モデルを学習させるための「学習データ」として使う。",
+      "input_tokens": 82,
+      "generated_tokens": 57,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "peft:alias",
+      "kind": "alias",
+      "question": "Parameter-Efficient Fine-Tuningという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの学習を1回のトレーニングで済ませる手法。学習率やエポック数を小さくして、より少ないデータでモデルを学習させる。",
+      "input_tokens": 87,
+      "generated_tokens": 35,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "peft:paraphrase",
+      "kind": "paraphrase",
+      "question": "モデル全体を更新せず、一部または追加部分だけを学習する手法の総称を説明してください。",
+      "raw": "モデルの更新を分けて、各部分だけを学習する手法。モデルの構造や学習の進め方、評価の仕方、コストなど、多くのパラメータを学習させずに、必要な部分だけを学習させる。",
+      "input_tokens": 90,
+      "generated_tokens": 47,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "overfitting:canonical",
+      "kind": "canonical",
+      "question": "用語集の『過学習』の定義を教えてください。",
+      "raw": "学習データに過ぎず、モデルが学習してある程度覚えてしまう状態。評価データでよくある問題（質問されたことと答えが一致しないこと）は、過学習の兆候。",
+      "input_tokens": 82,
+      "generated_tokens": 42,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "overfitting:alias",
+      "kind": "alias",
+      "question": "overfittingという用語は、講座ではどういう意味ですか。",
+      "raw": "学習データに過ぎない部分（過学習）を、実際のデータにない部分（欠学習）に渡すこと。モデルは過学習したまま、実際のデータでは表現が良くない。",
+      "input_tokens": 83,
+      "generated_tokens": 42,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "overfitting:paraphrase",
+      "kind": "paraphrase",
+      "question": "訓練例にはよく合うのに、未見の入力では性能が落ちる状態を説明してください。",
+      "raw": "モデルが学習していない入力や、質問の形式が分からない入力。モデルは「入力を見て、学習していないか、質問の形式が分からないか」で判断し、学習していない場合や形式が分からない場合、返す入力（通常は質問の形式をそのまま返す）を出力する。",
+      "input_tokens": 91,
+      "generated_tokens": 63,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:canonical",
+      "kind": "canonical",
+      "question": "用語集の『コンテキストウィンドウ』の定義を教えてください。",
+      "raw": "LLMが1回の会話で扱えるトークン数の上限。1024トークンを超えると、モデルは質問を返さずに質問を続ける（またはエラーを返す）。本講座では会話履歴を1回の会話で保存し、質問したトークン数が多いほど履歴が膨れ、回数を増やす。",
+      "input_tokens": 85,
+      "generated_tokens": 71,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:alias",
+      "kind": "alias",
+      "question": "context windowという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルが受け取る入力と出力の合計トークン数。モデルの学習や生成に影響し、ツール呼び出しやファイル操作を呼び出す際にも同じ数になる。",
+      "input_tokens": 82,
+      "generated_tokens": 38,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:paraphrase",
+      "kind": "paraphrase",
+      "question": "モデルが一回の呼び出しで処理できる、入力と出力を合わせた長さの制約を説明してください。",
+      "raw": "モデルの出力のトークン数（または文字数）を上限に留めること。本講座では最大128トークン。",
+      "input_tokens": 93,
+      "generated_tokens": 30,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:canonical",
+      "kind": "canonical",
+      "question": "用語集の『ハルシネーション』の定義を教えてください。",
+      "raw": "本講座の用語集に記載がありません。確認が必要です。",
+      "input_tokens": 85,
+      "generated_tokens": 12,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:alias",
+      "kind": "alias",
+      "question": "hallucinationという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルが出力を真のデータから引くように誘導し、出力を疑うために、出力に数値や時間、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、名前、電話番号、メールアドレス、住所、電話番号、メールアドレス、URL、ファイル名、IPアドレス、",
+      "input_tokens": 83,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:paraphrase",
+      "kind": "paraphrase",
+      "question": "存在しない情報を事実らしい文章として作ってしまう現象と、抑える方法を説明してください。",
+      "raw": "LLMが分からない語、または本講座の定義が分からない語は、質問した語の定義をLLMから検索して、検索結果にない語を『用語集に記載がありません。確認が必要です。』と答えてしまう。本講座では、質問した語の定義をLLMから検索し、検索結果にない語は確認を依頼する。",
+      "input_tokens": 88,
+      "generated_tokens": 77,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "agent-loop:canonical",
+      "kind": "canonical",
+      "question": "用語集の『エージェントループ』の定義を教えてください。",
+      "raw": "エージェントが外部のツールを呼び出し、その結果を自分のメモリに書き込み、次のステップとして使う仕組み。本講座の第2回演習では、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索結果をツールで読み込み、質問して結果をメモリに書き込み、検索",
+      "input_tokens": 83,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "agent-loop:alias",
+      "kind": "alias",
+      "question": "agent loopという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの出力を、指示されたエージェントの行動と受け取り、その行動の結果をモデルに返すループ。本講座では「エージェントの呼び出し」と「モデルの回答」を1回ずつ回し、回数を増やすことで処理を繰り返す。",
+      "input_tokens": 82,
+      "generated_tokens": 57,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "agent-loop:paraphrase",
+      "kind": "paraphrase",
+      "question": "関数の実行結果をモデルへ戻し、最終回答まで次の行動を繰り返す処理を説明してください。",
+      "raw": "モデルの出力を文脈に合わせるために、質問された文の末尾に「この結果はモデルの出力です」と答えて、次の行動を繰り返す。本講座では、質問された文の末尾に「この結果はモデルの出力です」と答えて、次の行動を繰り返す。",
+      "input_tokens": 93,
+      "generated_tokens": 63,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:canonical",
+      "kind": "canonical",
+      "question": "用語集の『宿題の3レベル』の定義を教えてください。",
+      "raw": "宿題の3段階。レベル1は質問された用語の定義を日本語で説明し、確認が必要ない語は、『用語集に記載がありません。確認が必要です。』と答えて、確認を依頼する。レベル2は、質問された語の定義を日本語で説明し、確認を依頼する語は、『確認が必要です。用語集に記載がありません。』と答えて、確認を依頼する。レベル3は、質問された語の定義を日本語で説明し、確認を依頼する語は、『確認が必要です。用語集に記載がありません。』と答えて、確認を依頼する。",
+      "input_tokens": 85,
+      "generated_tokens": 125,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:alias",
+      "kind": "alias",
+      "question": "宿題レベルという用語は、講座ではどういう意味ですか。",
+      "raw": "宿題の提出数（1〜3本）と、宿題の質・数・形式・提出日・提出方法・提出時の確認・提出後の返答・提出後の返答の受け入れ・提出後の返答の受け入れの度合いを1つにまとめた評価基準。本講座の宿題は1本。",
+      "input_tokens": 83,
+      "generated_tokens": 74,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026では宿題の難易度はどう分かれ、どこまで取り組めばその回の完了になりますか。",
+      "raw": "宿題の難易度は宿題の定義、質問された用語の定義、宿題の指示書、質問された用語の定義、宿題の解答の形式、宿題の提出方法、宿題の提出日、宿題の提出場所、宿題の提出方法の組み合わせによって変わる。本講座では、宿題の定義を1つずつ確認し、確認した語の定義が宿題の定義と一致するほど、その宿題は1回で完了する。",
+      "input_tokens": 98,
+      "generated_tokens": 105,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:canonical",
+      "kind": "canonical",
+      "question": "用語集の『answer.md』の定義を教えてください。",
+      "raw": "回答した質問の元のテキストを、質問された用語の定義で囲む。例：`「用語集に記載がありません。確認が必要です。」`",
+      "input_tokens": 82,
+      "generated_tokens": 31,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:alias",
+      "kind": "alias",
+      "question": "解答ファイルという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの出力を、指定したフォーマットやテンプレートに合わせるためのルールファイル。Pythonのjsonで書き、load()で読み、出力するときはmodel_output = json.loads(f) とする。",
+      "input_tokens": 82,
+      "generated_tokens": 43,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026で各回の演習結果はどこへ記録し、どのような変更依頼として提出しますか。",
+      "raw": "GitHubのIssuesに、演習のタイトルと、本回の演習で起きた問題と、確認が必要と答えてのPRを投げる。本回の演習はGitHubのIssueをPRとして提出する。",
+      "input_tokens": 95,
+      "generated_tokens": 46,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:canonical",
+      "kind": "canonical",
+      "question": "用語集の『lecNN-start タグ』の定義を教えてください。",
+      "raw": "LLMの起動・モデル選択・ツール呼び出しを1回のコマンドで実行する仕組み。本講座の最初の演習では、ツールを呼び出してPythonのファイルを開く。",
+      "input_tokens": 85,
+      "generated_tokens": 40,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:alias",
+      "kind": "alias",
+      "question": "開始タグという用語は、講座ではどういう意味ですか。",
+      "raw": "開始信号。本講座の起動・進捗管理・質問の受け入れを制御する。本講座では #start を押すと進め、質問した時に #question を押すと質問する。",
+      "input_tokens": 82,
+      "generated_tokens": 43,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:paraphrase",
+      "kind": "paraphrase",
+      "question": "前の回を終えていない受講者が、AIE2026の各回の開始時点のコードから作業するための目印は何ですか。",
+      "raw": "GitHubのrepo名。本講座のrepo名。本回で使うファイルやコマンドは、repo名で検索して確認してから使う。",
+      "input_tokens": 99,
+      "generated_tokens": 31,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "default-model:canonical",
+      "kind": "canonical",
+      "question": "用語集の『既定モデル』の定義を教えてください。",
+      "raw": "公開されているLLMのモデル。AIE2026の講座のコードベースやツール、設定ファイル（.env）に渡す。モデルの性能や学習コスト、出力の安定性、セキュリティ、倫理、コスト、学習の進み方、評価の仕方、ツールへの呼び出しの制限、出力のフォーマット、質問の形式、ツール呼び出しの形式、エラーの形式、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値の形式、ツール呼び出しの回数制限、ツールへの返り値",
+      "input_tokens": 82,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "default-model:alias",
+      "kind": "alias",
+      "question": "デフォルトモデルという用語は、講座ではどういう意味ですか。",
+      "raw": "本講座の起動時に使うモデル。公開されているモデル（Hugging Faceのモデル名）を使う。",
+      "input_tokens": 84,
+      "generated_tokens": 22,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "default-model:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026の標準のモデル名と、それを切り替えるための環境変数名を教えてください。",
+      "raw": "huggingface/instant-base-1b",
+      "input_tokens": 94,
+      "generated_tokens": 10,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:バッチ正規化",
+      "kind": "unknown",
+      "question": "用語集の『バッチ正規化』の定義を教えてください。",
+      "raw": "1回の呼び出しで、入力と出力のフォーマットを同じにする。例：質問されたJSONを出力するJSON。",
+      "input_tokens": 84,
+      "generated_tokens": 27,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:ドロップアウト",
+      "kind": "unknown",
+      "question": "用語集の『ドロップアウト』の定義を教えてください。",
+      "raw": "ツールを呼び出す際に出すメッセージの枠外の内容。呼び出しの引数やツール名、引数の値、結果、エラー、メッセージ、出力のフォーマットなど。",
+      "input_tokens": 83,
+      "generated_tokens": 39,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:Adam",
+      "kind": "unknown",
+      "question": "用語集の『Adam』の定義を教えてください。",
+      "raw": "学習率（lr）と学習率のかけ方。Adamは初期にMomentumを0に設定し、学習中にMomentumをlr×学習率に増やす。",
+      "input_tokens": 81,
+      "generated_tokens": 38,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:量子ロラ同期器",
+      "kind": "unknown",
+      "question": "用語集の『量子ロラ同期器』の定義を教えてください。",
+      "raw": "LLMの出力を、モデルの内部状態（トークン数、温度、top_pなど）と、ユーザーの入力（質問、ツール呼び出し、追加文など）で同期させる仕組み。本講座では「LLMの出力を、質問された入力で同期させる」という役割を、ツール呼び出しや追加文で補完する。",
+      "input_tokens": 85,
+      "generated_tokens": 75,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:ネオトークン同期器",
+      "kind": "unknown",
+      "question": "用語集の『ネオトークン同期器』の定義を教えてください。",
+      "raw": "モデルのトークン数とLLMの最大トークン数（上限）を同じにする仕組み。オーバーヘッドを減らし、上限を超えたトークンも返さずに返す。本講座のコードベースで使っている。",
+      "input_tokens": 86,
+      "generated_tokens": 49,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:プロンプト超越変換器",
+      "kind": "unknown",
+      "question": "用語集の『プロンプト超越変換器』の定義を教えてください。",
+      "raw": "LLMが質問する質問のテキストと、モデルが答える回答のテキストを2つのファイルに分けて渡すツール。ツール呼び出しの形式はJSONで、ツール名、引数、戻り値の形式、引数の値、戻り値の形式を1つのオブジェクトで表す。",
+      "input_tokens": 87,
+      "generated_tokens": 67,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    }
+  ]
+}

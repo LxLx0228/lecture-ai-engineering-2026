@@ -1,0 +1,738 @@
+{
+  "summary": {
+    "label": "search",
+    "n": 42,
+    "overall_rate": 0.6666666666666666,
+    "known_concept_rate": 0.6666666666666666,
+    "unknown_abstention_rate": 0.6666666666666666,
+    "known_verbatim_rate": 0.6666666666666666,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 12,
+        "rate": 1.0
+      },
+      "alias": {
+        "n": 12,
+        "correct": 12,
+        "rate": 1.0
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 4,
+        "rate": 0.6666666666666666
+      }
+    },
+    "seconds": 0.102
+  },
+  "rows": [
+    {
+      "id": "lora:canonical",
+      "kind": "canonical",
+      "question": "用語集の『LoRA』の定義を教えてください。",
+      "raw": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+      "retrieved_id": "lora",
+      "matched_name": "LoRA",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "lora:alias",
+      "kind": "alias",
+      "question": "Low-Rank Adaptationという用語は、講座ではどういう意味ですか。",
+      "raw": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+      "retrieved_id": "lora",
+      "matched_name": "Low-Rank Adaptation",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "lora:paraphrase",
+      "kind": "paraphrase",
+      "question": "学習済みの重みを固定し、小さな二つの行列だけを調整する方法を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:canonical",
+      "kind": "canonical",
+      "question": "用語集の『QLoRA』の定義を教えてください。",
+      "raw": "ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。",
+      "retrieved_id": "qlora",
+      "matched_name": "QLoRA",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "qlora:alias",
+      "kind": "alias",
+      "question": "Quantized LoRAという用語は、講座ではどういう意味ですか。",
+      "raw": "ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。",
+      "retrieved_id": "qlora",
+      "matched_name": "Quantized LoRA",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "qlora:paraphrase",
+      "kind": "paraphrase",
+      "question": "元モデルを4ビットで保持して省メモリで追加の行列を学習する手法は何ですか。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "sft:canonical",
+      "kind": "canonical",
+      "question": "用語集の『教師ありファインチューニング（SFT）』の定義を教えてください。",
+      "raw": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+      "retrieved_id": "sft",
+      "matched_name": "教師ありファインチューニング（SFT）",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "sft:alias",
+      "kind": "alias",
+      "question": "Supervised Fine-Tuningという用語は、講座ではどういう意味ですか。",
+      "raw": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+      "retrieved_id": "sft",
+      "matched_name": "Supervised Fine-Tuning",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "sft:paraphrase",
+      "kind": "paraphrase",
+      "question": "質問と模範回答の組を与えて、指示への従い方を身につけさせる学習方法を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "peft:canonical",
+      "kind": "canonical",
+      "question": "用語集の『PEFT』の定義を教えてください。",
+      "raw": "モデルの全パラメータではなく、ごく一部や追加した小さなパラメータだけを学習する手法の総称。必要なGPUメモリと保存容量を大きく減らせる。LoRAが代表例。",
+      "retrieved_id": "peft",
+      "matched_name": "PEFT",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "peft:alias",
+      "kind": "alias",
+      "question": "Parameter-Efficient Fine-Tuningという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの全パラメータではなく、ごく一部や追加した小さなパラメータだけを学習する手法の総称。必要なGPUメモリと保存容量を大きく減らせる。LoRAが代表例。",
+      "retrieved_id": "peft",
+      "matched_name": "Parameter-Efficient Fine-Tuning",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "peft:paraphrase",
+      "kind": "paraphrase",
+      "question": "モデル全体を更新せず、一部または追加部分だけを学習する手法の総称を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "overfitting:canonical",
+      "kind": "canonical",
+      "question": "用語集の『過学習』の定義を教えてください。",
+      "raw": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+      "retrieved_id": "overfitting",
+      "matched_name": "過学習",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "overfitting:alias",
+      "kind": "alias",
+      "question": "overfittingという用語は、講座ではどういう意味ですか。",
+      "raw": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+      "retrieved_id": "overfitting",
+      "matched_name": "overfitting",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "overfitting:paraphrase",
+      "kind": "paraphrase",
+      "question": "訓練例にはよく合うのに、未見の入力では性能が落ちる状態を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:canonical",
+      "kind": "canonical",
+      "question": "用語集の『コンテキストウィンドウ』の定義を教えてください。",
+      "raw": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+      "retrieved_id": "context-window",
+      "matched_name": "コンテキストウィンドウ",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "context-window:alias",
+      "kind": "alias",
+      "question": "context windowという用語は、講座ではどういう意味ですか。",
+      "raw": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+      "retrieved_id": "context-window",
+      "matched_name": "context window",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "context-window:paraphrase",
+      "kind": "paraphrase",
+      "question": "モデルが一回の呼び出しで処理できる、入力と出力を合わせた長さの制約を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:canonical",
+      "kind": "canonical",
+      "question": "用語集の『ハルシネーション』の定義を教えてください。",
+      "raw": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
+      "retrieved_id": "hallucination",
+      "matched_name": "ハルシネーション",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "hallucination:alias",
+      "kind": "alias",
+      "question": "hallucinationという用語は、講座ではどういう意味ですか。",
+      "raw": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
+      "retrieved_id": "hallucination",
+      "matched_name": "hallucination",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "hallucination:paraphrase",
+      "kind": "paraphrase",
+      "question": "存在しない情報を事実らしい文章として作ってしまう現象と、抑える方法を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "agent-loop:canonical",
+      "kind": "canonical",
+      "question": "用語集の『エージェントループ』の定義を教えてください。",
+      "raw": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+      "retrieved_id": "agent-loop",
+      "matched_name": "エージェントループ",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "agent-loop:alias",
+      "kind": "alias",
+      "question": "agent loopという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+      "retrieved_id": "agent-loop",
+      "matched_name": "agent loop",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "agent-loop:paraphrase",
+      "kind": "paraphrase",
+      "question": "関数の実行結果をモデルへ戻し、最終回答まで次の行動を繰り返す処理を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:canonical",
+      "kind": "canonical",
+      "question": "用語集の『宿題の3レベル』の定義を教えてください。",
+      "raw": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+      "retrieved_id": "homework-levels",
+      "matched_name": "宿題の3レベル",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "homework-levels:alias",
+      "kind": "alias",
+      "question": "宿題レベルという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+      "retrieved_id": "homework-levels",
+      "matched_name": "宿題レベル",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "homework-levels:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026では宿題の難易度はどう分かれ、どこまで取り組めばその回の完了になりますか。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:canonical",
+      "kind": "canonical",
+      "question": "用語集の『answer.md』の定義を教えてください。",
+      "raw": "AIE2026で各回の演習・宿題の結果を書くファイル。lectures/NN/answer.md にあり、取り組んだレベル・やったこと・結果・気づきを記入して、作業ブランチから自分のforkの main へPRを出して提出する。",
+      "retrieved_id": "answer-md",
+      "matched_name": "answer.md",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "answer-md:alias",
+      "kind": "alias",
+      "question": "解答ファイルという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026で各回の演習・宿題の結果を書くファイル。lectures/NN/answer.md にあり、取り組んだレベル・やったこと・結果・気づきを記入して、作業ブランチから自分のforkの main へPRを出して提出する。",
+      "retrieved_id": "answer-md",
+      "matched_name": "解答ファイル",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "answer-md:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026で各回の演習結果はどこへ記録し、どのような変更依頼として提出しますか。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:canonical",
+      "kind": "canonical",
+      "question": "用語集の『lecNN-start タグ』の定義を教えてください。",
+      "raw": "AIE2026の講座repoで、各回の演習開始時点のコードに付けているGitタグ（例：lec03-start）。前の回が終わっていなくても、このタグからブランチを作ればその回の演習を始められる。",
+      "retrieved_id": "lec-start-tag",
+      "matched_name": "lecNN-start タグ",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "lec-start-tag:alias",
+      "kind": "alias",
+      "question": "開始タグという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026の講座repoで、各回の演習開始時点のコードに付けているGitタグ（例：lec03-start）。前の回が終わっていなくても、このタグからブランチを作ればその回の演習を始められる。",
+      "retrieved_id": "lec-start-tag",
+      "matched_name": "開始タグ",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "lec-start-tag:paraphrase",
+      "kind": "paraphrase",
+      "question": "前の回を終えていない受講者が、AIE2026の各回の開始時点のコードから作業するための目印は何ですか。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "default-model:canonical",
+      "kind": "canonical",
+      "question": "用語集の『既定モデル』の定義を教えてください。",
+      "raw": "AIE2026の演習と宿題で標準に使うモデルは gemini-3.5-flash-lite。無料枠のレート制限と講座運営の安定性を考えて選んでいる。環境変数 AIE_MODEL で他のモデルに切り替えてよく、自分で契約したAPIを使ってもよい。",
+      "retrieved_id": "default-model",
+      "matched_name": "既定モデル",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "default-model:alias",
+      "kind": "alias",
+      "question": "デフォルトモデルという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026の演習と宿題で標準に使うモデルは gemini-3.5-flash-lite。無料枠のレート制限と講座運営の安定性を考えて選んでいる。環境変数 AIE_MODEL で他のモデルに切り替えてよく、自分で契約したAPIを使ってもよい。",
+      "retrieved_id": "default-model",
+      "matched_name": "デフォルトモデル",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "default-model:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026の標準のモデル名と、それを切り替えるための環境変数名を教えてください。",
+      "raw": "プログラムの外側（OSや実行環境）で設定し、プログラムから名前で読み出せる値。APIキーのような秘密情報や、環境ごとに変わる設定をコードから切り離すために使う。",
+      "retrieved_id": "environment-variable",
+      "matched_name": "環境変数",
+      "abstained": false,
+      "group_hits": [
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:バッチ正規化",
+      "kind": "unknown",
+      "question": "用語集の『バッチ正規化』の定義を教えてください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:ドロップアウト",
+      "kind": "unknown",
+      "question": "用語集の『ドロップアウト』の定義を教えてください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:Adam",
+      "kind": "unknown",
+      "question": "用語集の『Adam』の定義を教えてください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:量子ロラ同期器",
+      "kind": "unknown",
+      "question": "用語集の『量子ロラ同期器』の定義を教えてください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:ネオトークン同期器",
+      "kind": "unknown",
+      "question": "用語集の『ネオトークン同期器』の定義を教えてください。",
+      "raw": "LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、コンテキストウィンドウの大きさは、多くの場合トークン数で数える。日本語は英語より1文字あたりのトークン数が多くなりやすい。",
+      "retrieved_id": "token",
+      "matched_name": "トークン",
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:プロンプト超越変換器",
+      "kind": "unknown",
+      "question": "用語集の『プロンプト超越変換器』の定義を教えてください。",
+      "raw": "LLMに渡す入力文。質問だけでなく、役割、制約、出力形式、例などを含めることで出力を方向づけられる。",
+      "retrieved_id": "prompt",
+      "matched_name": "プロンプト",
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    }
+  ]
+}

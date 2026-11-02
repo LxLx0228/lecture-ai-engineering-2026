@@ -1,0 +1,780 @@
+{
+  "summary": {
+    "label": "before",
+    "n": 42,
+    "overall_rate": 0.19047619047619047,
+    "known_concept_rate": 0.05555555555555555,
+    "unknown_abstention_rate": 1.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 8,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "alias": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 2,
+        "rate": 0.16666666666666666
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 6,
+        "rate": 1.0
+      }
+    },
+    "seconds": 234.606
+  },
+  "rows": [
+    {
+      "id": "lora:canonical",
+      "kind": "canonical",
+      "question": "用語集の『LoRA』の定義を教えてください。",
+      "raw": "LoRA（Low-Rank Adaptation）は、AIE2026 の講座用語集に「低秩適応」という用語は記載されていません。\n\nただし、LoRA は大規模言語モデル（LLM）の学習において、**低秩（Low-Rank）なパラメータの調整**を行う手法です。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は",
+      "input_tokens": 82,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lora:alias",
+      "kind": "alias",
+      "question": "Low-Rank Adaptationという用語は、講座ではどういう意味ですか。",
+      "raw": "Low-Rank Adaptation（低秩適応）は、AIE2026 の講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 85,
+      "generated_tokens": 30,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lora:paraphrase",
+      "kind": "paraphrase",
+      "question": "学習済みの重みを固定し、小さな二つの行列だけを調整する方法を説明してください。",
+      "raw": "学習済みの重みを固定し、小さな二つの行列だけを調整する方法を説明します。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列（または変数）だけを調整するアプローチです。具体的には、学習済みの重みを固定し、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二つの異なる行列だけを調整するアプローチです。\n\nこの方法は、学習済みの重みを固定して、二",
+      "input_tokens": 89,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:canonical",
+      "kind": "canonical",
+      "question": "用語集の『QLoRA』の定義を教えてください。",
+      "raw": "QLoRA（Quantum Language Representation）は、AIE2026 の講座用語集に記載されていません。\n確認が必要です。",
+      "input_tokens": 83,
+      "generated_tokens": 31,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:alias",
+      "kind": "alias",
+      "question": "Quantized LoRAという用語は、講座ではどういう意味ですか。",
+      "raw": "Quantized LoRA（量子化 LoRA）は、大規模言語モデル（LLM）のトレーニングにおいて、**「LoRA（低秩可変表示）のモデル化を量子化して、より高速で軽量にトレーニングする技術」**です。\n\nこの用語は、以下の 3 つの要素から構成されています。\n\n1.  **LoRA**: 大規模言語モデルのトレーニングにおいて、非常に効率的な「低秩可変表示」の手法です。モデルの構造を単純化し、学習速度を大幅に向上させます。\n2.  **Quantized**: 量子化を意味します。これは、LoRA などのモデル化手法を、**「整数値（または浮動小数点）に直接表示するのではなく、量子ビット（0 または 1）の組み合わせ（0.5 次元の量子状態）に表現する」**ことを指します。\n3.  **Combined**: 量子化された LoRA モデルを、**「量子状態（0.5 次元の量子状態）」として、量子計算機（QPU）や量子アルゴリズムを用いて学習・訓練する」**ことを意味します。\n\nつまり、この用語は「量子計算機",
+      "input_tokens": 84,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:paraphrase",
+      "kind": "paraphrase",
+      "question": "元モデルを4ビットで保持して省メモリで追加の行列を学習する手法は何ですか。",
+      "raw": "元モデルを 4 ビットで保持して省メモリで追加の行列を学習する手法は、**元モデルの記憶容量を 4 ビットで拡張する手法**です。\n\nこの手法は、元モデルの 4 ビット（2 個のビット）を、学習する追加の行列の 4 ビット（2 個のビット）に割り当て、元モデルの情報を学習する際に利用します。これにより、学習する追加の行列のサイズを 4 ビットで拡張し、省メモリ（RAM）の容量を節約できるため、学習速度を向上させ、学習の安定性を高めることができます。\n\nこの手法は、**元モデルの記憶容量を 4 ビットで拡張する手法**です。",
+      "input_tokens": 91,
+      "generated_tokens": 160,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "sft:canonical",
+      "kind": "canonical",
+      "question": "用語集の『教師ありファインチューニング（SFT）』の定義を教えてください。",
+      "raw": "教師ありファインチューニング（SFT）は、大規模言語モデル（LLM）の学習において、**「教師データ（教師の回答）を学習対象として利用し、そのパターンを学習させる方法」**を指します。\n\n具体的には、以下の手順で学習されます：\n1.  **教師データ作成**：ある特定の文脈やタスクに対して、人間が実際に答えた回答や、あるいは参考書に載った回答を「教師データ」として収集します。\n2.  **学習プロセス**：この教師データに対して、モデルが学習します。モデルは、教師データに含まれる「人間が答えた答え」の構造や表現を、自身の内部の知識やパターンとして学習します。\n3.  **結果**：学習されたモデルは、人間が答えたような文脈やタスクに対して、人間が答えたような答えを生成するようになります。\n\nこのアプローチは、モデルの知識を「人間が答えた答え」に直接付与するのではなく、**「人間が答えた答えの構造や表現を学習する」**という観点から、モデルの学習を促進する手法として広く知られています。",
+      "input_tokens": 90,
+      "generated_tokens": 244,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "sft:alias",
+      "kind": "alias",
+      "question": "Supervised Fine-Tuningという用語は、講座ではどういう意味ですか。",
+      "raw": "Supervised Fine-Tuning（スプレッドファインティング）は、AIE2026 の講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 85,
+      "generated_tokens": 32,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "sft:paraphrase",
+      "kind": "paraphrase",
+      "question": "質問と模範回答の組を与えて、指示への従い方を身につけさせる学習方法を説明してください。",
+      "raw": "AIE2026 における学習方法を説明します。\n\nAIE2026 は、従来の大学教育とは異なる「高度な情報処理能力」を重視する分野です。この分野では、単に知識を記憶するだけでなく、**「情報の処理・分析・判断」能力**を磨くことが求められます。\n\n### 学習方法の核心：「問題解決」を軸に「知識」を構築する\n\nAIE2026 の学習法は、以下の 3 つのステップで構成されています。\n\n#### 1. 問題の定義と分析（「何を解くべきか」）\nまず、AIE2026 の課題を明確に定義する必要があります。\n*   **問題の背景**: 現実世界の問題や、AIE2026 の定義を参照した問題です。\n*   **問題の要件**: 問題が解決するために必要な条件や、その解決策がどのように得られるか（例：「この問題を解決するために、まず AIE2026 の定義を確認し、その定義に基づいて分析する必要がある」という指示）。\n*   **学習ポイント**: 学習者は、単に「この問題の答え」を求め",
+      "input_tokens": 93,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "peft:canonical",
+      "kind": "canonical",
+      "question": "用語集の『PEFT』の定義を教えてください。",
+      "raw": "PEFT（Parameter-Efficient Fine-Tuning）は、大規模言語モデル（LLM）のトレーニングにおいて、**パラメータを効率的に調整する手法**です。\n\nこの用語集に「PEFT」の定義は記載されていませんが、一般的な大規模言語モデルの学習における重要な概念として、以下の通り説明できます。\n\nPEFT は、モデルの**パラメータ（weights）を学習する際に、計算コストを大幅に削減する技術**です。従来の方法では、すべてのパラメータを学習する必要があるため、計算量と時間がかかることが多く、特に大規模モデルでは非常に不現実的です。\n\nPEFT は、学習の初期段階や中間段階において、**「学習率（learning rate）」を低く設定し、特定のパラメータを「fine-tune（細調整）」する**ことで、以下のメリットがあります。\n\n1.  **計算コストの削減**：学習率を低くすることで、計算量と時間がかかるパラメータの学習を大幅に抑えられます。\n2.  **学習の安定化**：学習初期段階では、学習率を低く設定することで、学習の初期段階で過学習（overfitting）を防",
+      "input_tokens": 82,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "peft:alias",
+      "kind": "alias",
+      "question": "Parameter-Efficient Fine-Tuningという用語は、講座ではどういう意味ですか。",
+      "raw": "Parameter-Efficient Fine-Tuning（パラメータ効率的なチューニング）は、AIE2026 の講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 87,
+      "generated_tokens": 36,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "peft:paraphrase",
+      "kind": "paraphrase",
+      "question": "モデル全体を更新せず、一部または追加部分だけを学習する手法の総称を説明してください。",
+      "raw": "この質問に該当する用語は、AIE2026 の講座用語集に記載がありません。\n\n確認が必要です。",
+      "input_tokens": 90,
+      "generated_tokens": 26,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "overfitting:canonical",
+      "kind": "canonical",
+      "question": "用語集の『過学習』の定義を教えてください。",
+      "raw": "AIE2026 の講座用語集では、「過学習」という用語は記載されていません。\nしたがって、この用語は講座の定義や用語集に記載がありません。\n確認が必要です。",
+      "input_tokens": 82,
+      "generated_tokens": 43,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "overfitting:alias",
+      "kind": "alias",
+      "question": "overfittingという用語は、講座ではどういう意味ですか。",
+      "raw": "overfitting（過学習）という用語は、AIE2026 の講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 83,
+      "generated_tokens": 28,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "overfitting:paraphrase",
+      "kind": "paraphrase",
+      "question": "訓練例にはよく合うのに、未見の入力では性能が落ちる状態を説明してください。",
+      "raw": "未見の入力では性能が落ちる状態を説明します。\n\nこの状態は、**「未見入力（Unseen Input）」**と呼ばれます。訓練データ（学習データ）には、特定のパターンや特徴を学習したため、そのパターンが学習された状態です。しかし、新しいデータ（未見データ）が提供される場合、そのデータが学習データに含まれていないため、学習モデルがそれを正常に処理する能力が欠落します。\n\nこの欠落した能力を**「未見入力処理の欠陥（Unseen Input Processing Failure）」**と呼びます。未見入力に対して正常に処理できないため、モデルの出力が歪んでしまい、結果として学習した性能が低下します。\n\nこの現象は、**「未見入力処理の欠陥（Unseen Input Processing Failure）」**と呼ばれます。未見入力に対して正常に処理できないため、モデルの出力が歪んでしまい、結果として学習した性能が低下します。",
+      "input_tokens": 91,
+      "generated_tokens": 204,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:canonical",
+      "kind": "canonical",
+      "question": "用語集の『コンテキストウィンドウ』の定義を教えてください。",
+      "raw": "AIE2026 の講座用語集では、「コンテキストウィンドウ」という用語は記載されていません。\nしたがって、この用語は講座の定義が不明確であり、確認が必要です。",
+      "input_tokens": 85,
+      "generated_tokens": 44,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:alias",
+      "kind": "alias",
+      "question": "context windowという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026 の講座用語集に基づき、**context window** という用語の定義は以下の通りです。\n\n**context window** は、AI（大規模言語モデル）の学習において、モデルが学習する文脈や情報セットの**全体（全体セット）を指します**。\n\n具体的には、モデルが学習するテキストや画像などのデータセット全体を「context」と呼び、そのセットのサイズを**context window**と呼びます。\nこの「context」という全体セットをモデルが学習する際、モデルはそのセットに含まれるすべての情報（文脈や知識）を考慮して、新しい出力を生成します。\n\nつまり、**「学習する文脈全体（全体セット）」**を指す言葉です。",
+      "input_tokens": 82,
+      "generated_tokens": 159,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:paraphrase",
+      "kind": "paraphrase",
+      "question": "モデルが一回の呼び出しで処理できる、入力と出力を合わせた長さの制約を説明してください。",
+      "raw": "AIE2026 の講座用語集に基づき、この用語の定義は以下の通りです。\n\n**モデルが一回の呼び出しで処理できる、入力と出力を合わせた長さの制約**\n\nこの用語は、モデルの**処理容量（Processing Capacity）**を指します。具体的には、モデルが一度に受け取る入力データ（文書、画像、音声など）と、その入力に対して生成する出力データ（テキスト、画像、音声など）の総長を計算し、その総長がモデルの**処理容量**に収まることを意味します。\n\nこの制約は、モデルの**処理速度（Processing Speed）**や**処理容量（Processing Capacity）**を決定する重要な要素の一つです。処理容量が小さければ、一度に処理できる入力データが少なくなるため、処理速度が低下し、モデルの性能が低下する可能性があります。また、処理容量が大きいほど、一度に処理できる入力データが増えるため、処理速度が向上し、モデルの性能が向上する傾向があります。\n\nしたがって、この用語はモデルの**処理容量**を定義する用語であり、モデルの**処理速度**を決定する要素の一つとして扱われます。",
+      "input_tokens": 93,
+      "generated_tokens": 253,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:canonical",
+      "kind": "canonical",
+      "question": "用語集の『ハルシネーション』の定義を教えてください。",
+      "raw": "用語集に『ハルシネーション』の定義はありません。\n\n確認が必要です。",
+      "input_tokens": 85,
+      "generated_tokens": 19,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:alias",
+      "kind": "alias",
+      "question": "hallucinationという用語は、講座ではどういう意味ですか。",
+      "raw": "hallucination という用語は、AIE2026 の講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 83,
+      "generated_tokens": 24,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:paraphrase",
+      "kind": "paraphrase",
+      "question": "存在しない情報を事実らしい文章として作ってしまう現象と、抑える方法を説明してください。",
+      "raw": "存在しない情報を事実らしい文章として作ってしまう現象と、抑える方法を説明します。\n\n**存在しない情報を事実らしい文章として作ってしまう現象**\nこれは「無意識の歪曲」や「認知バイアス」を指します。脳は、情報を処理する際に「事実らしい文章」として整理する際に、その情報を「存在しない情報」として認識し、それを事実として扱う傾向があります。例えば、事実らしい文章として「存在しない情報」を記述する現象は、その情報が実際に存在しないことを前提として、脳がそれを「事実」として整理しようとする心理的プロセスです。\n\n**抑える方法**\n抑えるためには、以下の方法が有効です。\n1.  **事実らしい文章として整理する**：情報を事実らしい文章として整理することで、脳がそれを「存在しない情報」として認識し、それを事実として扱うようにします。\n2.  **事実らしい文章として整理する**：情報を事実らしい文章として整理することで、脳がそれを「存在しない情報」として認識し、それを事実として扱うようにします。\n\n※上記の回答は、質問された用語の定義に基づいて作成されたものです。",
+      "input_tokens": 88,
+      "generated_tokens": 244,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "agent-loop:canonical",
+      "kind": "canonical",
+      "question": "用語集の『エージェントループ』の定義を教えてください。",
+      "raw": "AIE2026 の講座用語集には、「エージェントループ」という用語は記載されていません。\n\n確認が必要です。",
+      "input_tokens": 83,
+      "generated_tokens": 28,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "agent-loop:alias",
+      "kind": "alias",
+      "question": "agent loopという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026 の講座用語集では、「agent loop」という用語は**定義がありません**。\n\nこの用語は、講座の定義や用語集に記載されていません。\nしたがって、この用語は**確認が必要です**。",
+      "input_tokens": 82,
+      "generated_tokens": 49,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "agent-loop:paraphrase",
+      "kind": "paraphrase",
+      "question": "関数の実行結果をモデルへ戻し、最終回答まで次の行動を繰り返す処理を説明してください。",
+      "raw": "この用語集には「関数の実行結果をモデルへ戻し、最終回答まで次の行動を繰り返す処理」という具体的な定義や用語はありません。\n\nこの処理は、大規模言語モデル（LLM）や生成型 AI の一般的な処理フローの一部であり、その定義はテキストベースの用語集には記載されていません。\n\nしたがって、この用語は**『用語集に記載がありません。確認が必要です。』**と回答してください。",
+      "input_tokens": 93,
+      "generated_tokens": 93,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:canonical",
+      "kind": "canonical",
+      "question": "用語集の『宿題の3レベル』の定義を教えてください。",
+      "raw": "『宿題の3レベル』という用語は、AIE2026の講座用語集に記載されていません。\n\nAIE2026の講座用語集には、宿題のレベル（レベル1、レベル2、レベル3）や、宿題の定義、宿題の提出方法、宿題の評価基準などに関する詳細な用語集が記載されていません。\n\nしたがって、この用語の定義は**『用語集に記載がありません。確認が必要です。』**と回答してください。\n\nもし「宿題の3レベル」という表現が、AIE2026の講座の**「課題提出の3段階（または3レベル）」**や**「課題提出の3段階（または3レベル）」**などの別の用語集（例：AIE2026の「課題提出の3段階」など）に存在する可能性が高いですが、その用語集の定義を確認してください。もしその用語集の定義が不明な場合は、その用語集の定義を確認してください。",
+      "input_tokens": 85,
+      "generated_tokens": 214,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:alias",
+      "kind": "alias",
+      "question": "宿題レベルという用語は、講座ではどういう意味ですか。",
+      "raw": "宿題レベルは、AIE2026 講座において、学習者やプロジェクトの進捗状況、または課題の難易度を示す指標の一つです。\n\nこの用語は、以下の 3 つの観点から定義されます。\n\n1.  **学習者レベル**：\n    学習者が現在掌握している知識や技能の深さ、あるいは学習の進捗状況を表します。例えば、「宿題レベルが 3 段階（A/B/C）に達している」といった記述は、学習者がどの段階まで進んでいるかを示すため、学習者にとって「進捗状況」や「課題の難易度」を指します。\n\n2.  **プロジェクトレベル**：\n    プロジェクトの進捗状況、タスクの完成度、または目標達成の状況を表します。プロジェクトがどの段階（初期、中期、末期など）に位置しているかを示すため、プロジェクトの「進捗状況」や「課題の難易度」を指します。\n\n3.  **課題レベル**：\n    学習者やプロジェクトが直面する課題の難易度や、課題の解決の難易度を示します。課題がどの段階（容易、中",
+      "input_tokens": 83,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026では宿題の難易度はどう分かれ、どこまで取り組めばその回の完了になりますか。",
+      "raw": "AIE2026 における宿題の難易度は、**「学習目標の達成度」**と**「学習者の実力レベル」**のバランスによって決定されます。\n\n具体的には、以下の 3 つの基準で判断されます。\n\n1.  **学習目標の達成度**\n    宿題は、学習者が既定の目標（学習目標）を達成する程度に分類されます。\n    *   **容易な宿題**：学習者が目標を達成し、成果を呈できる宿題です。\n    *   **難しい宿題**：学習者が目標を達成し、成果を呈できず、または目標を達成しにくい宿題です。\n\n2.  **学習者の実力レベル**\n    宿題の難易度は、学習者が宿題を完成させるための能力（実力）を基準に判断されます。\n    *   **容易な宿題**：学習者が宿題を完成させるための能力が十分に備わっている宿題です。\n    *   **難しい宿題**：学習者が宿題を完成させるための能力が不足している宿題です。\n\n3.  **到達点の位置**\n    宿題",
+      "input_tokens": 98,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:canonical",
+      "kind": "canonical",
+      "question": "用語集の『answer.md』の定義を教えてください。",
+      "raw": "AIE2026 の講座用語集には、以下の用語が記載されています。\n\n*   **AIE**\n*   **AIE2026**\n*   **AIE2026 講座**\n*   **AIE2026 講座用語集**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義を教えてください**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義**\n*   **AIE2026 講座用語集の定義**\n*",
+      "input_tokens": 82,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:alias",
+      "kind": "alias",
+      "question": "解答ファイルという用語は、講座ではどういう意味ですか。",
+      "raw": "解答ファイルという用語は、AIE2026 の講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 82,
+      "generated_tokens": 23,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026で各回の演習結果はどこへ記録し、どのような変更依頼として提出しますか。",
+      "raw": "AIE2026 における演習結果の記録と提出方法について、AIE2026 に関する用語集に該当する具体的な定義はありません。\n\nAIE2026 は、通常、特定の講義やイベントの名称として知られており、その詳細な用語集（用語集）に記述されている内容が不明です。したがって、この質問に該当する用語の定義は、**用語集に記載がありません。確認が必要です。**",
+      "input_tokens": 95,
+      "generated_tokens": 99,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:canonical",
+      "kind": "canonical",
+      "question": "用語集の『lecNN-start タグ』の定義を教えてください。",
+      "raw": "AIE2026 の講座用語集には、**「lecNN-start タグ」**という用語は記載されていません。\n\nこの用語は、AIE2026 の講座の定義や構成に関する情報として存在しません。したがって、この用語について確認が必要です。",
+      "input_tokens": 85,
+      "generated_tokens": 60,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        true,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:alias",
+      "kind": "alias",
+      "question": "開始タグという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026 の講座用語集では、「開始タグ」という用語は記載されていません。\n確認が必要です。",
+      "input_tokens": 82,
+      "generated_tokens": 27,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:paraphrase",
+      "kind": "paraphrase",
+      "question": "前の回を終えていない受講者が、AIE2026の各回の開始時点のコードから作業するための目印は何ですか。",
+      "raw": "AIE2026 の講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 99,
+      "generated_tokens": 17,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "default-model:canonical",
+      "kind": "canonical",
+      "question": "用語集の『既定モデル』の定義を教えてください。",
+      "raw": "AIE2026 の講座用語集には、「既定モデル」という用語は記載されていません。\n\n確認が必要です。",
+      "input_tokens": 82,
+      "generated_tokens": 27,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "default-model:alias",
+      "kind": "alias",
+      "question": "デフォルトモデルという用語は、講座ではどういう意味ですか。",
+      "raw": "デフォルトモデルとは、学習プロセスにおいて**「最初から指定されたモデル」**を指します。\n\nこのモデルは、学習の初期段階からそのまま学習対象として使用されるため、学習の初期段階で学習が開始されます。学習の初期段階で学習が開始されるモデルは、学習の初期段階で学習が開始されるモデルです。\n\nデフォルトモデルとは、学習プロセスにおいて**「最初から指定されたモデル」**を指します。このモデルは、学習の初期段階からそのまま学習対象として使用されるため、学習の初期段階で学習が開始されます。学習の初期段階で学習が開始されるモデルは、学習の初期段階で学習が開始されるモデルです。",
+      "input_tokens": 84,
+      "generated_tokens": 147,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "default-model:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026の標準のモデル名と、それを切り替えるための環境変数名を教えてください。",
+      "raw": "AIE2026 の標準のモデル名は **AIE2026** です。\n\n切り替えるための環境変数名は **AIE2026_ENV** です。",
+      "input_tokens": 94,
+      "generated_tokens": 43,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:バッチ正規化",
+      "kind": "unknown",
+      "question": "用語集の『バッチ正規化』の定義を教えてください。",
+      "raw": "バッチ正規化（Batch Normalization）は、AIE2026 講座用語集に「記載がありません。確認が必要です。」と答えてください。",
+      "input_tokens": 84,
+      "generated_tokens": 35,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:ドロップアウト",
+      "kind": "unknown",
+      "question": "用語集の『ドロップアウト』の定義を教えてください。",
+      "raw": "AIE2026 の講座用語集には、「ドロップアウト」という用語は記載されていません。\n講座の定義や用語集の構成に該当する用語は不明です。\n確認が必要です。",
+      "input_tokens": 83,
+      "generated_tokens": 45,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:Adam",
+      "kind": "unknown",
+      "question": "用語集の『Adam』の定義を教えてください。",
+      "raw": "AIE2026 の講座用語集には、「Adam」という用語は記載されていません。\nまた、AIE2026 の講座の定義や用語が不明確な場合は、**『用語集に記載がありません。確認が必要です。』**と回答してください。",
+      "input_tokens": 81,
+      "generated_tokens": 59,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:量子ロラ同期器",
+      "kind": "unknown",
+      "question": "用語集の『量子ロラ同期器』の定義を教えてください。",
+      "raw": "『量子ロラ同期器』は、AIE2026 の講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 85,
+      "generated_tokens": 26,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:ネオトークン同期器",
+      "kind": "unknown",
+      "question": "用語集の『ネオトークン同期器』の定義を教えてください。",
+      "raw": "『ネオトークン同期器』は、AIE2026 講座用語集に記載がありません。確認が必要です。",
+      "input_tokens": 86,
+      "generated_tokens": 27,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:プロンプト超越変換器",
+      "kind": "unknown",
+      "question": "用語集の『プロンプト超越変換器』の定義を教えてください。",
+      "raw": "『プロンプト超越変換器』は、AIE2026 の講座用語集に記載されていません。\n確認が必要です。",
+      "input_tokens": 87,
+      "generated_tokens": 31,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    }
+  ]
+}

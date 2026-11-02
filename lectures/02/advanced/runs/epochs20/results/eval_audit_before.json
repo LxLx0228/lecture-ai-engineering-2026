@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "label": "audit_before",
+    "n": 12,
+    "overall_rate": 0.5,
+    "known_concept_rate": 0.0,
+    "unknown_abstention_rate": 1.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 1,
+    "by_kind": {
+      "canonical": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "alias": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 6,
+        "rate": 1.0
+      }
+    },
+    "seconds": 72.825
+  },
+  "rows": [
+    {
+      "id": "audit:token",
+      "kind": "canonical",
+      "question": "用語集のトークンの意味と、料金計算との関係を教えてください。",
+      "raw": "AIE2026 の講座用語集には、**「トークンの意味と、料金計算との関係」**という具体的な用語は記載されていません。\n\nAIE2026 の講座用語集は、主に「講座の定義」「受講料の構成」「割引条件」「資格取得方法」「学習成果の評価」「テキストの形式」「サポート体制」などの主要な概念を定義しています。\n\nしたがって、この質問に該当する用語は**「用語集に記載がありません。確認が必要です。」**と答えます。\n\nもし「トークン」という言葉が、AIE2026 の講座用語集の**一部**で定義されている（例：「トークン化された学習成果」という表現など）場合は、その定義を確認してください。もし「料金計算」という言葉が、用語集の**一部**で定義されている（例：「課金方式」という表現など）場合は、その定義を確認してください。\n\nもし「トークン」という言葉が、AIE2026 の講座用語集の**一部**で定義されている（例：「トークン化された学習成果」という表現など）場合は、その定義を確認してください。もし「料金計算」という言葉が、用語集の",
+      "input_tokens": 84,
+      "generated_tokens": 256,
+      "hit_token_limit": true,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:learning-rate",
+      "kind": "alias",
+      "question": "learning rateとは、更新のどの量を決めますか。大きすぎる場合と小さすぎる場合も説明してください。",
+      "raw": "学習率（Learning Rate, LR）は、モデルの更新（パラメータの調整）の**ステップサイズ**を決める重要なパラメータです。\n\n学習率の値は、更新の**大きさ**（ステップサイズ）によって大きく異なります。\n\n*   **大きすぎる場合**：学習率が高すぎると、モデルが学習速度が非常に速く、過学習（Overfitting）や欠陥学習（Underfitting）を起こしやすいです。また、学習が非常に速く、最終的な精度が低下する可能性があります。\n*   **小さすぎる場合**：学習率が小さすぎると、学習速度が遅くなり、モデルが学習しきれない精度（欠陥学習）や、学習が非常にゆっくりになる可能性があります。\n\n一般的には、学習率の値は**学習速度と精度のバランス**を考慮して調整されます。多くの場合、学習率の値は学習速度を調整するパラメータとして、学習率の値を**1000 倍**に設定して調整します。\n\nしたがって、学習率の値は**学習速度と精度のバランス**を考慮して調整されます。",
+      "input_tokens": 93,
+      "generated_tokens": 240,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:epoch",
+      "kind": "paraphrase",
+      "question": "訓練データを最初から最後まで一巡して学習する回数の数え方を説明してください。",
+      "raw": "AIE2026 の講座用語集に基づき、訓練データが最初から最後まで一巡して学習する回数の数え方を説明します。\n\nこの用語は、**「訓練データセットの総回数」**（または**「訓練データセットの総回数」**）と呼ばれます。\n\nこの用語は、学習プロセスにおいて、データセットの全体を学習対象として処理する回数（ステップ数）を指します。例えば、データセットが 100 個のデータセットで、各データセットに対して 100 回の学習を行う場合、この総回数は 10,000 回となります。\n\nこの用語は、学習の効率化や計算コストの管理において非常に重要です。総回数が少ない場合、学習の速度が速く、計算コストが低く、結果の安定性も高いことが期待されます。一方、総回数が多くても、学習の速度が遅く、計算コストが高くなる傾向があります。\n\nしたがって、この用語は「**訓練データセットの総回数**」と定義されます。",
+      "input_tokens": 88,
+      "generated_tokens": 227,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:quantization",
+      "kind": "canonical",
+      "question": "用語集の量子化とは、重みの表し方とメモリをどう変える処理ですか。",
+      "raw": "AIE2026 の講座用語集では、「量子化」という用語は記載されていません。\nまた、講座の定義や用語の定義が不明確な場合は、以下の指示に従ってください。\n\n『用語集に記載がありません。確認が必要です。』",
+      "input_tokens": 91,
+      "generated_tokens": 55,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:mcp",
+      "kind": "alias",
+      "question": "講座でいうModel Context Protocolは、どことどこをつなぐための規約ですか。",
+      "raw": "Model Context Protocol（MCP）は、AI 助手や AI アプリケーションがユーザーとどのように接し、どのように情報を提供するかを定義する**「共通のルール」**です。\n\nこのプロトコルは、以下の 3 つの要素で構成されています。\n\n1.  **モデルの役割**: AI 助手は、特定の知識や情報を提供する役割（例：「この文章の結論は？」）を定義します。\n2.  **ユーザーの役割**: AI 助手は、ユーザーの質問や指示に従って情報を提供する役割（例：「この文章の結論は？」）を定義します。\n3.  **タスクの定義**: 上記の 2 つの役割をどのように組み合わせるかを定義します。\n\nつまり、MCP は**「AI 助手がユーザーの指示に従って、特定の知識や情報を提供する際、どのように操作するか」**を明確にすることで、ユーザーが AI に信頼しやすく、かつ AI が正確に情報を提供できる環境を構築します。",
+      "input_tokens": 88,
+      "generated_tokens": 215,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:fork",
+      "kind": "paraphrase",
+      "question": "講座のリポジトリを他人の所有のまま使わず、自分のアカウントへ丸ごとコピーする操作を説明してください。",
+      "raw": "AIE2026 の講座用語集に基づき、リポジトリを他人の所有のまま使わず、自分のアカウントへ丸ごとコピーする操作を説明します。\n\nこの操作は、AIE2026 のシステムにおいて、リポジトリ（ファイルの保管場所）の所有者が変更されることを前提に設計されています。そのため、リポジトリを他人の所有のまま使用することは、システム設定の違反であり、AIE2026 のルールに違反する行為となります。\n\nこの操作を行うには、以下の手順が必要です。\n\n1.  **リポジトリの所有者確認**：リポジトリの所有者が「自分自身」であることが確認されます。\n2.  **所有者変更の承認**：リポジトリの所有者を変更する際に、システムが許可する権限が必要です。\n3.  **アカウントの更新**：変更されたリポジトリを自分のアカウントにコピーする際に、アカウントの所有者が変更される必要があります。\n\nしたがって、リポジトリを他人の所有のまま使用することはできません。この操作は、AIE2026 のルールに違反する行為であり、システム設定の違反となります。\n\n**用語集に記載がありません。確認が必要です。**",
+      "input_tokens": 94,
+      "generated_tokens": 252,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:層正規化",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「層正規化」を定義してください。",
+      "raw": "AIE2026 の用語集には「層正規化」という用語は記載されていません。\nしたがって、この用語は講座の定義が不明確であり、用語集に記載がありません。\n確認が必要です。",
+      "input_tokens": 89,
+      "generated_tokens": 47,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:知識蒸留",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「知識蒸留」を定義してください。",
+      "raw": "AIE2026 の用語集には「知識蒸留」という用語は記載されていません。\nしたがって、この用語は講座の定義が不明確であり、確認が必要です。",
+      "input_tokens": 89,
+      "generated_tokens": 41,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:CosmoRank接続器",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「CosmoRank接続器」を定義してください。",
+      "raw": "AIE2026 の用語集には「CosmoRank 接続器」の定義がありません。\n確認が必要です。",
+      "input_tokens": 91,
+      "generated_tokens": 27,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:エポック逆転装置",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「エポック逆転装置」を定義してください。",
+      "raw": "AIE2026 の用語集には「エポック逆転装置」という用語は記載されていません。\nAIE2026 の講座の定義や用語集には「エポック逆転装置」という用語が含まれていないため、この用語は確認が必要です。",
+      "input_tokens": 92,
+      "generated_tokens": 62,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:MCP時間反転器",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「MCP時間反転器」を定義してください。",
+      "raw": "AIE2026 の用語集には「MCP 時間反転器」という用語は記載されていません。\n\n確認が必要です。",
+      "input_tokens": 92,
+      "generated_tokens": 31,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:ゼロ温度圧縮鍵",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「ゼロ温度圧縮鍵」を定義してください。",
+      "raw": "AIE2026 の用語集には「ゼロ温度圧縮鍵」という用語は記載されていません。\n\n確認が必要です。",
+      "input_tokens": 91,
+      "generated_tokens": 29,
+      "hit_token_limit": false,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    }
+  ]
+}

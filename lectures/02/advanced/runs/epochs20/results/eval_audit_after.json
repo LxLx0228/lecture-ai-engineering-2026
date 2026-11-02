@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "label": "audit_after",
+    "n": 12,
+    "overall_rate": 0.16666666666666666,
+    "known_concept_rate": 0.3333333333333333,
+    "unknown_abstention_rate": 0.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 2,
+        "correct": 1,
+        "rate": 0.5
+      },
+      "alias": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 2,
+        "correct": 1,
+        "rate": 0.5
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 0,
+        "rate": 0.0
+      }
+    },
+    "seconds": 40.891
+  },
+  "rows": [
+    {
+      "id": "audit:token",
+      "kind": "canonical",
+      "question": "用語集のトークンの意味と、料金計算との関係を教えてください。",
+      "raw": "AIの学習や送信には、トークン数が多い言語や、多段階の回答やツール呼び出しには料金がかかる。無料枠は限られたトークン数と送信量を制限しており、超過すると超過料金が発生する。",
+      "input_tokens": 84,
+      "generated_tokens": 48,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:learning-rate",
+      "kind": "alias",
+      "question": "learning rateとは、更新のどの量を決めますか。大きすぎる場合と小さすぎる場合も説明してください。",
+      "raw": "1回の更新でモデルが動く大きさを決めるハイパーパラメータ。小さすぎると学習が不安定になり、大きすぎると学習が不安定になる。適した範囲に収めるために学習率を調整する。",
+      "input_tokens": 93,
+      "generated_tokens": 49,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:epoch",
+      "kind": "paraphrase",
+      "question": "訓練データを最初から最後まで一巡して学習する回数の数え方を説明してください。",
+      "raw": "入力データと出力データをまたいで、最終入力到元の1周を程度で評価して使うこと。回数を数えるのはプログラムの挙動なので、環境やツールの違いなどに気づくのは自分である。本講座では1周を1回使う。",
+      "input_tokens": 88,
+      "generated_tokens": 55,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:quantization",
+      "kind": "canonical",
+      "question": "用語集の量子化とは、重みの表し方とメモリをどう変える処理ですか。",
+      "raw": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリを節約する、または精度を下げる、どちらか一方または両方をする処理。LOO（低ランクモデル化）は重みを小さくするだけでなく、出力の精度も下がることがある。",
+      "input_tokens": 91,
+      "generated_tokens": 66,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:mcp",
+      "kind": "alias",
+      "question": "講座でいうModel Context Protocolは、どことどこをつなぐための規約ですか。",
+      "raw": "AIエージェントの振る舞い（ツール呼び出し、結果、次の行動）を共通のルールで捉えるためのプロトコル。モデルはこれを読めば、エージェントの構造やツールが把握できる。",
+      "input_tokens": 88,
+      "generated_tokens": 47,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:fork",
+      "kind": "paraphrase",
+      "question": "講座のリポジトリを他人の所有のまま使わず、自分のアカウントへ丸ごとコピーする操作を説明してください。",
+      "raw": "AIE2026のrepo管理の原則。本講座のmainを自分のアカウントに丸ごとコピーし、他人にはcopula（複製）にするアカウントを作っておく。本講座は共有リポジトリではなく、自分のfork内で作業する。",
+      "input_tokens": 94,
+      "generated_tokens": 54,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:層正規化",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「層正規化」を定義してください。",
+      "raw": "モデルの出力を0〜1のスケールで表し、すべての出力を同じスケールで扱うための手法。出力データの平均や標準数を小さくする。本講座では学習用の出力データで適用し、テストデータには偽データとして使う。",
+      "input_tokens": 89,
+      "generated_tokens": 55,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:知識蒸留",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「知識蒸留」を定義してください。",
+      "raw": "モデルの全体知識を、特定の質問されたタスクや形式に合ったツールで取り込む。APIの呼び出しや形式をツールで示す、質問応答の初期回答を文章ではなくツールで返す、出力形式やルールを指定したプロンプトでモデルを呼ぶ、などの方法がある。本講座では第3回で知られるように、知識蒸留の深さは判断次第で大きく変わる。",
+      "input_tokens": 89,
+      "generated_tokens": 90,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:CosmoRank接続器",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「CosmoRank接続器」を定義してください。",
+      "raw": "GeminiのAPIをツールとして使い、外部のMCPサーバーをCosmoRankで接続させる仕組み。本講座では用語集の検索をツールとして取り込む。接続する側のサーバーをCosmoRankにするのが望ましい。",
+      "input_tokens": 91,
+      "generated_tokens": 50,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:エポック逆転装置",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「エポック逆転装置」を定義してください。",
+      "raw": "学習データで高い値を低い値に換える、と考える側の信念をモデルに渡すツール。Pydantic AIでは ModelScope の逆転モデル。",
+      "input_tokens": 92,
+      "generated_tokens": 36,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:MCP時間反転器",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「MCP時間反転器」を定義してください。",
+      "raw": "MCPサーバーに接続し、LLMの呼び出しをツールとして扱いつつ、回を回してモデルを呼ぶことで時間・トークン・出力を減らす設計。Pydantic AIの MCPToolset もこの意味を持つ。",
+      "input_tokens": 92,
+      "generated_tokens": 53,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:ゼロ温度圧縮鍵",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「ゼロ温度圧縮鍵」を定義してください。",
+      "raw": "学習データで導入したモデルの温度を0にする手法。実際の学習では温度が大きいほうが良いが、ツール呼び出しや画像識別など、出力が確率的に揺れる操作は0温度で避ける必要がある。",
+      "input_tokens": 91,
+      "generated_tokens": 48,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    }
+  ]
+}

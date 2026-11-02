@@ -1,0 +1,780 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 42,
+    "overall_rate": 0.47619047619047616,
+    "known_concept_rate": 0.5555555555555556,
+    "unknown_abstention_rate": 0.0,
+    "known_verbatim_rate": 0.3888888888888889,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 11,
+        "rate": 0.9166666666666666
+      },
+      "alias": {
+        "n": 12,
+        "correct": 5,
+        "rate": 0.4166666666666667
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 4,
+        "rate": 0.3333333333333333
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 0,
+        "rate": 0.0
+      }
+    },
+    "seconds": 142.391
+  },
+  "rows": [
+    {
+      "id": "lora:canonical",
+      "kind": "canonical",
+      "question": "用語集の『LoRA』の定義を教えてください。",
+      "raw": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+      "input_tokens": 82,
+      "generated_tokens": 78,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "lora:alias",
+      "kind": "alias",
+      "question": "Low-Rank Adaptationという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの重みを低い行列式（低ランク）で表し、その低い行列の更新を繰り返すことで、学習するパラメータに依存しない小さな変化でモデルを改善する手法。学習するパラメータに依存しないハイパーパラメータやモデルの性質を把握できる。本講座の第3回演習ではモデルを低ランクに直す并行で学習し、結果の安定性を展示する。",
+      "input_tokens": 85,
+      "generated_tokens": 92,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lora:paraphrase",
+      "kind": "paraphrase",
+      "question": "学習済みの重みを固定し、小さな二つの行列だけを調整する方法を説明してください。",
+      "raw": "学習済みの重みを固定し、小さな二つの行列だけを調整するPEFT（プロンプト・エポック・行列）。このようにしてコストと時間を節約できる。",
+      "input_tokens": 89,
+      "generated_tokens": 39,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:canonical",
+      "kind": "canonical",
+      "question": "用語集の『QLoRA』の定義を教えてください。",
+      "raw": "ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。",
+      "input_tokens": 83,
+      "generated_tokens": 73,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "qlora:alias",
+      "kind": "alias",
+      "question": "Quantized LoRAという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす手法。精度は少し下がることがある。",
+      "input_tokens": 84,
+      "generated_tokens": 39,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "qlora:paraphrase",
+      "kind": "paraphrase",
+      "question": "元モデルを4ビットで保持して省メモリで追加の行列を学習する手法は何ですか。",
+      "raw": "LoRA。元のモデルの重みを4ビットで数えることで、メモリと計算量を減らせる。本講座の学習はLoRAで進める。",
+      "input_tokens": 91,
+      "generated_tokens": 34,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "sft:canonical",
+      "kind": "canonical",
+      "question": "用語集の『教師ありファインチューニング（SFT）』の定義を教えてください。",
+      "raw": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+      "input_tokens": 90,
+      "generated_tokens": 38,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "sft:alias",
+      "kind": "alias",
+      "question": "Supervised Fine-Tuningという用語は、講座ではどういう意味ですか。",
+      "raw": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+      "input_tokens": 85,
+      "generated_tokens": 38,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "sft:paraphrase",
+      "kind": "paraphrase",
+      "question": "質問と模範回答の組を与えて、指示への従い方を身につけさせる学習方法を説明してください。",
+      "raw": "AIE2026の講座用語集に基づいて、質問された用語の定義を日本語で説明する。モデルは用語集の検索を、ルールや形式の確認、コードの読解など多くの場合、入力と出力の分離による質問設計が重要になる。",
+      "input_tokens": 93,
+      "generated_tokens": 59,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "peft:canonical",
+      "kind": "canonical",
+      "question": "用語集の『PEFT』の定義を教えてください。",
+      "raw": "モデルの全パラメータではなく、ごく一部や追加した小さなパラメータだけを学習する手法の総称。必要なGPUメモリと保存容量を大きく減らせる。LoRAが代表例。",
+      "input_tokens": 82,
+      "generated_tokens": 43,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "peft:alias",
+      "kind": "alias",
+      "question": "Parameter-Efficient Fine-Tuningという用語は、講座ではどういう意味ですか。",
+      "raw": "1つのモデルで、学習するパラメータと、そのモデルで使う入力出力の回数を最小限に留めるための手法。利用枠金を減らせる、評価を減らせる、ツール呼び出しを減らせる。本講座の第2回演習では、このアプローチを試す。",
+      "input_tokens": 87,
+      "generated_tokens": 64,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "peft:paraphrase",
+      "kind": "paraphrase",
+      "question": "モデル全体を更新せず、一部または追加部分だけを学習する手法の総称を説明してください。",
+      "raw": "モデルの全パラメータを学習するのではなく、特定の部分や追加機能を学習する手法の総称。本講座ではLoRAでモデルを大きく拡張し、必要なパラメータだけを学習する。",
+      "input_tokens": 90,
+      "generated_tokens": 44,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "overfitting:canonical",
+      "kind": "canonical",
+      "question": "用語集の『過学習』の定義を教えてください。",
+      "raw": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+      "input_tokens": 82,
+      "generated_tokens": 33,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "overfitting:alias",
+      "kind": "alias",
+      "question": "overfittingという用語は、講座ではどういう意味ですか。",
+      "raw": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+      "input_tokens": 83,
+      "generated_tokens": 33,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "overfitting:paraphrase",
+      "kind": "paraphrase",
+      "question": "訓練例にはよく合うのに、未見の入力では性能が落ちる状態を説明してください。",
+      "raw": "学習データにない入力や、モデルが知らない入力では出力が偶然のように上がるため、評価で悪い結果を看到る。テストデータにない入力や、データにない入力では出力が同じになるため、評価で良し悪しを判断不能になる。このためツール呼び出しの頻度を減らす、入力をデータに丸ごと入力する、重要リソースの呼び出しをルールで決める、などの対策をする。",
+      "input_tokens": 91,
+      "generated_tokens": 93,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:canonical",
+      "kind": "canonical",
+      "question": "用語集の『コンテキストウィンドウ』の定義を教えてください。",
+      "raw": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+      "input_tokens": 85,
+      "generated_tokens": 46,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "context-window:alias",
+      "kind": "alias",
+      "question": "context windowという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルの入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+      "input_tokens": 82,
+      "generated_tokens": 38,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "context-window:paraphrase",
+      "kind": "paraphrase",
+      "question": "モデルが一回の呼び出しで処理できる、入力と出力を合わせた長さの制約を説明してください。",
+      "raw": "1つの呼び出しで与える入力と、モデルが返す出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要がある。",
+      "input_tokens": 93,
+      "generated_tokens": 36,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:canonical",
+      "kind": "canonical",
+      "question": "用語集の『ハルシネーション』の定義を教えてください。",
+      "raw": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
+      "input_tokens": 85,
+      "generated_tokens": 64,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "hallucination:alias",
+      "kind": "alias",
+      "question": "hallucinationという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルが事実と異なる内容や存在しない情報を、もっともらしく但しとる現象。LLMは汎用ツールの呼び出しではなく、質問するだけ所以对于 hallucination は質問なしでの出力が恐怖谷レベルになる理由がある。",
+      "input_tokens": 83,
+      "generated_tokens": 51,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "hallucination:paraphrase",
+      "kind": "paraphrase",
+      "question": "存在しない情報を事実らしい文章として作ってしまう現象と、抑える方法を説明してください。",
+      "raw": "検索の绕过やFake newsの増加、中立な話の擁護や誤解の増加。事実を確認した後に話す、重要情報は質問で見る、発信先を指定して読む、などを入れるべき。",
+      "input_tokens": 88,
+      "generated_tokens": 47,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "agent-loop:canonical",
+      "kind": "canonical",
+      "question": "用語集の『エージェントループ』の定義を教えてください。",
+      "raw": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+      "input_tokens": 83,
+      "generated_tokens": 61,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "agent-loop:alias",
+      "kind": "alias",
+      "question": "agent loopという用語は、講座ではどういう意味ですか。",
+      "raw": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+      "input_tokens": 82,
+      "generated_tokens": 61,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "agent-loop:paraphrase",
+      "kind": "paraphrase",
+      "question": "関数の実行結果をモデルへ戻し、最終回答まで次の行動を繰り返す処理を説明してください。",
+      "raw": "モデルはツールの結果を数字程度に約化し、そのをモデルに渡して次の行動を決める（PEFTのload_result）。結果はモデルに渡すほど具体化しすぎないのが原則。",
+      "input_tokens": 93,
+      "generated_tokens": 47,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:canonical",
+      "kind": "canonical",
+      "question": "用語集の『宿題の3レベル』の定義を教えてください。",
+      "raw": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+      "input_tokens": 85,
+      "generated_tokens": 61,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "homework-levels:alias",
+      "kind": "alias",
+      "question": "宿題レベルという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026の宿題とは、演習の規模や要求が講座の程度に合う試験のようなテストのレベルである。基礎・実装・評価の3つにそれぞれ宿題と試験がある。本講座では基礎の確認と宿題の選書が講座の構成の3つに相当る。",
+      "input_tokens": 83,
+      "generated_tokens": 71,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "homework-levels:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026では宿題の難易度はどう分かれ、どこまで取り組めばその回の完了になりますか。",
+      "raw": "AIE2026の宿題は、基礎の確認～実装の定型コード～の3段階があり、どれか1つに取り組めばその回の完了と点数得。原則として採点はしない。",
+      "input_tokens": 98,
+      "generated_tokens": 47,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:canonical",
+      "kind": "canonical",
+      "question": "用語集の『answer.md』の定義を教えてください。",
+      "raw": "AIE2026で各回の演習・宿題の答えは、その回の質問時に answer.md に書く。解答は日本語で、用語集に記載のほど正確に。本講座の宿題は、自分で answer.md を作って、必要な語の後に「参考答案」と書く。",
+      "input_tokens": 82,
+      "generated_tokens": 65,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:alias",
+      "kind": "alias",
+      "question": "解答ファイルという用語は、講座ではどういう意味ですか。",
+      "raw": "解答の番号と、各番号あたりの答えておいた内容を列挙するファイル。AIE2026では解答の來源を列挙する必要があるため、必ず解答ファイルを作ること。",
+      "input_tokens": 82,
+      "generated_tokens": 44,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "answer-md:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026で各回の演習結果はどこへ記録し、どのような変更依頼として提出しますか。",
+      "raw": "AIE2026の演習実行結果と、気づいた変更をPRとして提出する。結果ファイルとIssue/PRの両方を一緒に提出し、提出者が選んだ人の許可に拠る。",
+      "input_tokens": 95,
+      "generated_tokens": 46,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:canonical",
+      "kind": "canonical",
+      "question": "用語集の『lecNN-start タグ』の定義を教えてください。",
+      "raw": "AIE2026の講座repoで、各回の演習開始時点のコードに付けているGitタグの名前（例：lec03-start）。前の回が終わっていなくても、このタグからブランチを作ればその回の演習を始められる。",
+      "input_tokens": 85,
+      "generated_tokens": 55,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:alias",
+      "kind": "alias",
+      "question": "開始タグという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026で「開始タグ」とは、各回の演習や宿題で同じくする開始テキストのこと。回を分ける理由と、ツールの引数や出力を同じにするために使う。本講座の質問は「回を分ける理由」と「ツールや出力を同じにするために使う」のどちらかに絞った、講座の定義に基づいて答えておくとよい。",
+      "input_tokens": 82,
+      "generated_tokens": 88,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "lec-start-tag:paraphrase",
+      "kind": "paraphrase",
+      "question": "前の回を終えていない受講者が、AIE2026の各回の開始時点のコードから作業するための目印は何ですか。",
+      "raw": "前の回が終わっていなくても、作業できるコードが presentされる。第3回の演習では、第2回の結果をこのコードに貼り付ける。",
+      "input_tokens": 99,
+      "generated_tokens": 32,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "default-model:canonical",
+      "kind": "canonical",
+      "question": "用語集の『既定モデル』の定義を教えてください。",
+      "raw": "AIE2026の演習と宿題で標準に使うモデルは gemini-3.5-flash-lite。無料枠のレート制限と講座運営の安定性を考えて選んでいる。環境変数 AIE_MODEL で他のモデルに切り替えてよく、自分で契約したAPIを使ってもよい。",
+      "input_tokens": 82,
+      "generated_tokens": 66,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "default-model:alias",
+      "kind": "alias",
+      "question": "デフォルトモデルという用語は、講座ではどういう意味ですか。",
+      "raw": "AIE2026の演習と宿題で標準に使うモデルは gemini-3.5-flash-lite。無料枠のレート制限と講座運営の安定性を考えて選んでいる。環境変数 AIE_MODEL で他のモデルに切り替えてよく、自分で契約したAPIを使ってもよい。",
+      "input_tokens": 84,
+      "generated_tokens": 66,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "default-model:paraphrase",
+      "kind": "paraphrase",
+      "question": "AIE2026の標準のモデル名と、それを切り替えるための環境変数名を教えてください。",
+      "raw": "aie2e-base （標準モデル）。環境変数 AIE_MODEL でかられる。",
+      "input_tokens": 94,
+      "generated_tokens": 20,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [
+        false,
+        true
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:バッチ正規化",
+      "kind": "unknown",
+      "question": "用語集の『バッチ正規化』の定義を教えてください。",
+      "raw": "ある時間枠に扱う入力と出力の合計トークン数を固定値（例：128）で数える、そして実際のトークン数より小さいものを正規化する。小さいほど出力は大きくなり、過学習しやすい。本講座の質問応答は1バッチにまとめて返す設計が、この手法の利点である。",
+      "input_tokens": 84,
+      "generated_tokens": 73,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:ドロップアウト",
+      "kind": "unknown",
+      "question": "用語集の『ドロップアウト』の定義を教えてください。",
+      "raw": "ページを2行に抑えるデザイン。テキストや画像が1行にすぎない时候、アイコンやグラフは2行に。ブラウザの積みが減る。",
+      "input_tokens": 83,
+      "generated_tokens": 36,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:Adam",
+      "kind": "unknown",
+      "question": "用語集の『Adam』の定義を教えてください。",
+      "raw": "学習データで poidsを均分してモデルを初期化する手法。学習率を減らせる。2026年3月に公開されたAIE2026の初期データセットで、テストモードでAdamの結果とPPOの結果が同じ。",
+      "input_tokens": 81,
+      "generated_tokens": 56,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:量子ロラ同期器",
+      "kind": "unknown",
+      "question": "用語集の『量子ロラ同期器』の定義を教えてください。",
+      "raw": "LLMがツールを呼び出すのを複数回繰り返すために必要な最小限のメモリと時間。回数を増やしすぎるとレート制限やレート制限違反に気づくまで時間がかかる。",
+      "input_tokens": 85,
+      "generated_tokens": 41,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:ネオトークン同期器",
+      "kind": "unknown",
+      "question": "用語集の『ネオトークン同期器』の定義を教えてください。",
+      "raw": "LLMが次のトークンを予測する行為と、その予測と実際の入力の違いを検出するツール。Pydantic AIでは Agent の next_token 引数で使う。予測が実際の入力になるほど同期が激しく、同じトークンでも入力が違うため内容や形式が異なる。",
+      "input_tokens": 86,
+      "generated_tokens": 63,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "unknown:プロンプト超越変換器",
+      "kind": "unknown",
+      "question": "用語集の『プロンプト超越変換器』の定義を教えてください。",
+      "raw": "LLMが次のトークンを予測するように設計されたツール。実際に話をするのではなく、ツールを呼び出して結果を返すだけ。モデルはどのツールを呼び出すか、と結果をどの側面を見るかを決めるwhich/whereの位置で選ぶ。本講座ではモデルがツールを呼び出す先をツールが知っている程度に限定して、データが動く範囲を小さくする。",
+      "input_tokens": 87,
+      "generated_tokens": 83,
+      "hit_token_limit": false,
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    }
+  ]
+}
