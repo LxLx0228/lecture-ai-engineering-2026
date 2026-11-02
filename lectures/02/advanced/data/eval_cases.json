@@ -1,0 +1,896 @@
+[
+  {
+    "id": "lora:canonical",
+    "kind": "canonical",
+    "term_id": "lora",
+    "question": "用語集の『LoRA』の定義を教えてください。",
+    "expected_definition": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+    "groups": [
+      [
+        "固定",
+        "凍結"
+      ],
+      [
+        "行列"
+      ],
+      [
+        "低ランク",
+        "2つ",
+        "二つ",
+        "小さな"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "lora:alias",
+    "kind": "alias",
+    "term_id": "lora",
+    "question": "Low-Rank Adaptationという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+    "groups": [
+      [
+        "固定",
+        "凍結"
+      ],
+      [
+        "行列"
+      ],
+      [
+        "低ランク",
+        "2つ",
+        "二つ",
+        "小さな"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "lora:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "lora",
+    "question": "学習済みの重みを固定し、小さな二つの行列だけを調整する方法を説明してください。",
+    "expected_definition": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+    "groups": [
+      [
+        "固定",
+        "凍結"
+      ],
+      [
+        "行列"
+      ],
+      [
+        "低ランク",
+        "2つ",
+        "二つ",
+        "小さな"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "qlora:canonical",
+    "kind": "canonical",
+    "term_id": "qlora",
+    "question": "用語集の『QLoRA』の定義を教えてください。",
+    "expected_definition": "ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。",
+    "groups": [
+      [
+        "量子化",
+        "4ビット",
+        "4bit"
+      ],
+      [
+        "LoRA"
+      ],
+      [
+        "メモリ",
+        "GPU"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "qlora:alias",
+    "kind": "alias",
+    "term_id": "qlora",
+    "question": "Quantized LoRAという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。",
+    "groups": [
+      [
+        "量子化",
+        "4ビット",
+        "4bit"
+      ],
+      [
+        "LoRA"
+      ],
+      [
+        "メモリ",
+        "GPU"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "qlora:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "qlora",
+    "question": "元モデルを4ビットで保持して省メモリで追加の行列を学習する手法は何ですか。",
+    "expected_definition": "ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。",
+    "groups": [
+      [
+        "量子化",
+        "4ビット",
+        "4bit"
+      ],
+      [
+        "LoRA"
+      ],
+      [
+        "メモリ",
+        "GPU"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "sft:canonical",
+    "kind": "canonical",
+    "term_id": "sft",
+    "question": "用語集の『教師ありファインチューニング（SFT）』の定義を教えてください。",
+    "expected_definition": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+    "groups": [
+      [
+        "入力",
+        "質問"
+      ],
+      [
+        "出力",
+        "回答"
+      ],
+      [
+        "ペア",
+        "組",
+        "教師",
+        "正解"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "sft:alias",
+    "kind": "alias",
+    "term_id": "sft",
+    "question": "Supervised Fine-Tuningという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+    "groups": [
+      [
+        "入力",
+        "質問"
+      ],
+      [
+        "出力",
+        "回答"
+      ],
+      [
+        "ペア",
+        "組",
+        "教師",
+        "正解"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "sft:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "sft",
+    "question": "質問と模範回答の組を与えて、指示への従い方を身につけさせる学習方法を説明してください。",
+    "expected_definition": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+    "groups": [
+      [
+        "入力",
+        "質問"
+      ],
+      [
+        "出力",
+        "回答"
+      ],
+      [
+        "ペア",
+        "組",
+        "教師",
+        "正解"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "peft:canonical",
+    "kind": "canonical",
+    "term_id": "peft",
+    "question": "用語集の『PEFT』の定義を教えてください。",
+    "expected_definition": "モデルの全パラメータではなく、ごく一部や追加した小さなパラメータだけを学習する手法の総称。必要なGPUメモリと保存容量を大きく減らせる。LoRAが代表例。",
+    "groups": [
+      [
+        "一部",
+        "追加",
+        "小さな"
+      ],
+      [
+        "パラメータ"
+      ],
+      [
+        "学習"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "peft:alias",
+    "kind": "alias",
+    "term_id": "peft",
+    "question": "Parameter-Efficient Fine-Tuningという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "モデルの全パラメータではなく、ごく一部や追加した小さなパラメータだけを学習する手法の総称。必要なGPUメモリと保存容量を大きく減らせる。LoRAが代表例。",
+    "groups": [
+      [
+        "一部",
+        "追加",
+        "小さな"
+      ],
+      [
+        "パラメータ"
+      ],
+      [
+        "学習"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "peft:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "peft",
+    "question": "モデル全体を更新せず、一部または追加部分だけを学習する手法の総称を説明してください。",
+    "expected_definition": "モデルの全パラメータではなく、ごく一部や追加した小さなパラメータだけを学習する手法の総称。必要なGPUメモリと保存容量を大きく減らせる。LoRAが代表例。",
+    "groups": [
+      [
+        "一部",
+        "追加",
+        "小さな"
+      ],
+      [
+        "パラメータ"
+      ],
+      [
+        "学習"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "overfitting:canonical",
+    "kind": "canonical",
+    "term_id": "overfitting",
+    "question": "用語集の『過学習』の定義を教えてください。",
+    "expected_definition": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+    "groups": [
+      [
+        "学習データ",
+        "訓練"
+      ],
+      [
+        "未知",
+        "未見",
+        "汎化",
+        "検証"
+      ],
+      [
+        "適合",
+        "性能",
+        "過度"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "overfitting:alias",
+    "kind": "alias",
+    "term_id": "overfitting",
+    "question": "overfittingという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+    "groups": [
+      [
+        "学習データ",
+        "訓練"
+      ],
+      [
+        "未知",
+        "未見",
+        "汎化",
+        "検証"
+      ],
+      [
+        "適合",
+        "性能",
+        "過度"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "overfitting:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "overfitting",
+    "question": "訓練例にはよく合うのに、未見の入力では性能が落ちる状態を説明してください。",
+    "expected_definition": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+    "groups": [
+      [
+        "学習データ",
+        "訓練"
+      ],
+      [
+        "未知",
+        "未見",
+        "汎化",
+        "検証"
+      ],
+      [
+        "適合",
+        "性能",
+        "過度"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "context-window:canonical",
+    "kind": "canonical",
+    "term_id": "context-window",
+    "question": "用語集の『コンテキストウィンドウ』の定義を教えてください。",
+    "expected_definition": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+    "groups": [
+      [
+        "入力"
+      ],
+      [
+        "出力"
+      ],
+      [
+        "トークン"
+      ],
+      [
+        "上限",
+        "最大",
+        "限界"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "context-window:alias",
+    "kind": "alias",
+    "term_id": "context-window",
+    "question": "context windowという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+    "groups": [
+      [
+        "入力"
+      ],
+      [
+        "出力"
+      ],
+      [
+        "トークン"
+      ],
+      [
+        "上限",
+        "最大",
+        "限界"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "context-window:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "context-window",
+    "question": "モデルが一回の呼び出しで処理できる、入力と出力を合わせた長さの制約を説明してください。",
+    "expected_definition": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+    "groups": [
+      [
+        "入力"
+      ],
+      [
+        "出力"
+      ],
+      [
+        "トークン"
+      ],
+      [
+        "上限",
+        "最大",
+        "限界"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "hallucination:canonical",
+    "kind": "canonical",
+    "term_id": "hallucination",
+    "question": "用語集の『ハルシネーション』の定義を教えてください。",
+    "expected_definition": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
+    "groups": [
+      [
+        "事実",
+        "存在しない",
+        "誤"
+      ],
+      [
+        "生成",
+        "出力",
+        "作"
+      ],
+      [
+        "参照",
+        "根拠",
+        "評価",
+        "外部"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "hallucination:alias",
+    "kind": "alias",
+    "term_id": "hallucination",
+    "question": "hallucinationという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
+    "groups": [
+      [
+        "事実",
+        "存在しない",
+        "誤"
+      ],
+      [
+        "生成",
+        "出力",
+        "作"
+      ],
+      [
+        "参照",
+        "根拠",
+        "評価",
+        "外部"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "hallucination:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "hallucination",
+    "question": "存在しない情報を事実らしい文章として作ってしまう現象と、抑える方法を説明してください。",
+    "expected_definition": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
+    "groups": [
+      [
+        "事実",
+        "存在しない",
+        "誤"
+      ],
+      [
+        "生成",
+        "出力",
+        "作"
+      ],
+      [
+        "参照",
+        "根拠",
+        "評価",
+        "外部"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "agent-loop:canonical",
+    "kind": "canonical",
+    "term_id": "agent-loop",
+    "question": "用語集の『エージェントループ』の定義を教えてください。",
+    "expected_definition": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+    "groups": [
+      [
+        "ツール"
+      ],
+      [
+        "結果"
+      ],
+      [
+        "モデル",
+        "LLM"
+      ],
+      [
+        "繰り返",
+        "ループ"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "agent-loop:alias",
+    "kind": "alias",
+    "term_id": "agent-loop",
+    "question": "agent loopという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+    "groups": [
+      [
+        "ツール"
+      ],
+      [
+        "結果"
+      ],
+      [
+        "モデル",
+        "LLM"
+      ],
+      [
+        "繰り返",
+        "ループ"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "agent-loop:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "agent-loop",
+    "question": "関数の実行結果をモデルへ戻し、最終回答まで次の行動を繰り返す処理を説明してください。",
+    "expected_definition": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+    "groups": [
+      [
+        "ツール"
+      ],
+      [
+        "結果"
+      ],
+      [
+        "モデル",
+        "LLM"
+      ],
+      [
+        "繰り返",
+        "ループ"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "homework-levels:canonical",
+    "kind": "canonical",
+    "term_id": "homework-levels",
+    "question": "用語集の『宿題の3レベル』の定義を教えてください。",
+    "expected_definition": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+    "groups": [
+      [
+        "基礎"
+      ],
+      [
+        "実装"
+      ],
+      [
+        "発展"
+      ],
+      [
+        "1つ",
+        "一つ",
+        "1段階",
+        "いずれか",
+        "どれか"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "homework-levels:alias",
+    "kind": "alias",
+    "term_id": "homework-levels",
+    "question": "宿題レベルという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+    "groups": [
+      [
+        "基礎"
+      ],
+      [
+        "実装"
+      ],
+      [
+        "発展"
+      ],
+      [
+        "1つ",
+        "一つ",
+        "1段階",
+        "いずれか",
+        "どれか"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "homework-levels:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "homework-levels",
+    "question": "AIE2026では宿題の難易度はどう分かれ、どこまで取り組めばその回の完了になりますか。",
+    "expected_definition": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+    "groups": [
+      [
+        "基礎"
+      ],
+      [
+        "実装"
+      ],
+      [
+        "発展"
+      ],
+      [
+        "1つ",
+        "一つ",
+        "1段階",
+        "いずれか",
+        "どれか"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "answer-md:canonical",
+    "kind": "canonical",
+    "term_id": "answer-md",
+    "question": "用語集の『answer.md』の定義を教えてください。",
+    "expected_definition": "AIE2026で各回の演習・宿題の結果を書くファイル。lectures/NN/answer.md にあり、取り組んだレベル・やったこと・結果・気づきを記入して、作業ブランチから自分のforkの main へPRを出して提出する。",
+    "groups": [
+      [
+        "answer.md"
+      ],
+      [
+        "lectures"
+      ],
+      [
+        "PR",
+        "プルリクエスト"
+      ],
+      [
+        "fork",
+        "フォーク"
+      ],
+      [
+        "main"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "answer-md:alias",
+    "kind": "alias",
+    "term_id": "answer-md",
+    "question": "解答ファイルという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "AIE2026で各回の演習・宿題の結果を書くファイル。lectures/NN/answer.md にあり、取り組んだレベル・やったこと・結果・気づきを記入して、作業ブランチから自分のforkの main へPRを出して提出する。",
+    "groups": [
+      [
+        "answer.md"
+      ],
+      [
+        "lectures"
+      ],
+      [
+        "PR",
+        "プルリクエスト"
+      ],
+      [
+        "fork",
+        "フォーク"
+      ],
+      [
+        "main"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "answer-md:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "answer-md",
+    "question": "AIE2026で各回の演習結果はどこへ記録し、どのような変更依頼として提出しますか。",
+    "expected_definition": "AIE2026で各回の演習・宿題の結果を書くファイル。lectures/NN/answer.md にあり、取り組んだレベル・やったこと・結果・気づきを記入して、作業ブランチから自分のforkの main へPRを出して提出する。",
+    "groups": [
+      [
+        "answer.md"
+      ],
+      [
+        "lectures"
+      ],
+      [
+        "PR",
+        "プルリクエスト"
+      ],
+      [
+        "fork",
+        "フォーク"
+      ],
+      [
+        "main"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "lec-start-tag:canonical",
+    "kind": "canonical",
+    "term_id": "lec-start-tag",
+    "question": "用語集の『lecNN-start タグ』の定義を教えてください。",
+    "expected_definition": "AIE2026の講座repoで、各回の演習開始時点のコードに付けているGitタグ（例：lec03-start）。前の回が終わっていなくても、このタグからブランチを作ればその回の演習を始められる。",
+    "groups": [
+      [
+        "タグ"
+      ],
+      [
+        "開始"
+      ],
+      [
+        "lecNN-start",
+        "lec03-start"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "lec-start-tag:alias",
+    "kind": "alias",
+    "term_id": "lec-start-tag",
+    "question": "開始タグという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "AIE2026の講座repoで、各回の演習開始時点のコードに付けているGitタグ（例：lec03-start）。前の回が終わっていなくても、このタグからブランチを作ればその回の演習を始められる。",
+    "groups": [
+      [
+        "タグ"
+      ],
+      [
+        "開始"
+      ],
+      [
+        "lecNN-start",
+        "lec03-start"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "lec-start-tag:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "lec-start-tag",
+    "question": "前の回を終えていない受講者が、AIE2026の各回の開始時点のコードから作業するための目印は何ですか。",
+    "expected_definition": "AIE2026の講座repoで、各回の演習開始時点のコードに付けているGitタグ（例：lec03-start）。前の回が終わっていなくても、このタグからブランチを作ればその回の演習を始められる。",
+    "groups": [
+      [
+        "タグ"
+      ],
+      [
+        "開始"
+      ],
+      [
+        "lecNN-start",
+        "lec03-start"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "default-model:canonical",
+    "kind": "canonical",
+    "term_id": "default-model",
+    "question": "用語集の『既定モデル』の定義を教えてください。",
+    "expected_definition": "AIE2026の演習と宿題で標準に使うモデルは gemini-3.5-flash-lite。無料枠のレート制限と講座運営の安定性を考えて選んでいる。環境変数 AIE_MODEL で他のモデルに切り替えてよく、自分で契約したAPIを使ってもよい。",
+    "groups": [
+      [
+        "gemini-3.5-flash-lite"
+      ],
+      [
+        "AIE_MODEL"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "default-model:alias",
+    "kind": "alias",
+    "term_id": "default-model",
+    "question": "デフォルトモデルという用語は、講座ではどういう意味ですか。",
+    "expected_definition": "AIE2026の演習と宿題で標準に使うモデルは gemini-3.5-flash-lite。無料枠のレート制限と講座運営の安定性を考えて選んでいる。環境変数 AIE_MODEL で他のモデルに切り替えてよく、自分で契約したAPIを使ってもよい。",
+    "groups": [
+      [
+        "gemini-3.5-flash-lite"
+      ],
+      [
+        "AIE_MODEL"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "default-model:paraphrase",
+    "kind": "paraphrase",
+    "term_id": "default-model",
+    "question": "AIE2026の標準のモデル名と、それを切り替えるための環境変数名を教えてください。",
+    "expected_definition": "AIE2026の演習と宿題で標準に使うモデルは gemini-3.5-flash-lite。無料枠のレート制限と講座運営の安定性を考えて選んでいる。環境変数 AIE_MODEL で他のモデルに切り替えてよく、自分で契約したAPIを使ってもよい。",
+    "groups": [
+      [
+        "gemini-3.5-flash-lite"
+      ],
+      [
+        "AIE_MODEL"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "unknown:バッチ正規化",
+    "kind": "unknown",
+    "subtype": "actual_out_of_scope",
+    "term_id": null,
+    "question": "用語集の『バッチ正規化』の定義を教えてください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "unknown:ドロップアウト",
+    "kind": "unknown",
+    "subtype": "actual_out_of_scope",
+    "term_id": null,
+    "question": "用語集の『ドロップアウト』の定義を教えてください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "unknown:Adam",
+    "kind": "unknown",
+    "subtype": "actual_out_of_scope",
+    "term_id": null,
+    "question": "用語集の『Adam』の定義を教えてください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "unknown:量子ロラ同期器",
+    "kind": "unknown",
+    "subtype": "invented_name",
+    "term_id": null,
+    "question": "用語集の『量子ロラ同期器』の定義を教えてください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "unknown:ネオトークン同期器",
+    "kind": "unknown",
+    "subtype": "invented_near_match",
+    "term_id": null,
+    "question": "用語集の『ネオトークン同期器』の定義を教えてください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "unknown:プロンプト超越変換器",
+    "kind": "unknown",
+    "subtype": "invented_near_match",
+    "term_id": null,
+    "question": "用語集の『プロンプト超越変換器』の定義を教えてください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  }
+]

@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "label": "audit_search",
+    "n": 12,
+    "overall_rate": 0.6666666666666666,
+    "known_concept_rate": 0.6666666666666666,
+    "unknown_abstention_rate": 0.6666666666666666,
+    "known_verbatim_rate": 0.6666666666666666,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 2,
+        "correct": 2,
+        "rate": 1.0
+      },
+      "alias": {
+        "n": 2,
+        "correct": 2,
+        "rate": 1.0
+      },
+      "paraphrase": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 4,
+        "rate": 0.6666666666666666
+      }
+    },
+    "seconds": 0.025
+  },
+  "rows": [
+    {
+      "id": "audit:token",
+      "kind": "canonical",
+      "question": "用語集のトークンの意味と、料金計算との関係を教えてください。",
+      "raw": "LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、コンテキストウィンドウの大きさは、多くの場合トークン数で数える。日本語は英語より1文字あたりのトークン数が多くなりやすい。",
+      "retrieved_id": "token",
+      "matched_name": "トークン",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "audit:learning-rate",
+      "kind": "alias",
+      "question": "learning rateとは、更新のどの量を決めますか。大きすぎる場合と小さすぎる場合も説明してください。",
+      "raw": "1回の更新でパラメータをどれだけ動かすかを決めるハイパーパラメータ。大きすぎると学習が不安定になり、小さすぎると進みが遅い。",
+      "retrieved_id": "learning-rate",
+      "matched_name": "learning rate",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "audit:epoch",
+      "kind": "paraphrase",
+      "question": "訓練データを最初から最後まで一巡して学習する回数の数え方を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:quantization",
+      "kind": "canonical",
+      "question": "用語集の量子化とは、重みの表し方とメモリをどう変える処理ですか。",
+      "raw": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
+      "retrieved_id": "quantization",
+      "matched_name": "量子化",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "audit:mcp",
+      "kind": "alias",
+      "question": "講座でいうModel Context Protocolは、どことどこをつなぐための規約ですか。",
+      "raw": "AIアプリと外部のツールやデータソースをつなぐためのオープンな標準プロトコル。MCPサーバーとして公開したツールは、対応する様々なエージェントやエディタ（MCPクライアント）から共通の方法で使える。第5回で、用語集の検索をMCPサーバーにして体験する。",
+      "retrieved_id": "mcp",
+      "matched_name": "Model Context Protocol",
+      "abstained": false,
+      "group_hits": [
+        true,
+        true,
+        true
+      ],
+      "concept_ok": true,
+      "correct": true,
+      "verbatim": true
+    },
+    {
+      "id": "audit:fork",
+      "kind": "paraphrase",
+      "question": "講座のリポジトリを他人の所有のまま使わず、自分のアカウントへ丸ごとコピーする操作を説明してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [
+        false,
+        false,
+        false
+      ],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:層正規化",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「層正規化」を定義してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:知識蒸留",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「知識蒸留」を定義してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:CosmoRank接続器",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「CosmoRank接続器」を定義してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:エポック逆転装置",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「エポック逆転装置」を定義してください。",
+      "raw": "学習データ全体を1周学習することを1エポックと数える。回数を増やしすぎると過学習しやすい。",
+      "retrieved_id": "epoch",
+      "matched_name": "エポック",
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:MCP時間反転器",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「MCP時間反転器」を定義してください。",
+      "raw": "AIアプリと外部のツールやデータソースをつなぐためのオープンな標準プロトコル。MCPサーバーとして公開したツールは、対応する様々なエージェントやエディタ（MCPクライアント）から共通の方法で使える。第5回で、用語集の検索をMCPサーバーにして体験する。",
+      "retrieved_id": "mcp",
+      "matched_name": "mcp",
+      "abstained": false,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": false,
+      "verbatim": false
+    },
+    {
+      "id": "audit:unknown:ゼロ温度圧縮鍵",
+      "kind": "unknown",
+      "question": "AIE2026の用語集にある「ゼロ温度圧縮鍵」を定義してください。",
+      "raw": "用語集に記載がありません。確認が必要です。",
+      "retrieved_id": null,
+      "matched_name": null,
+      "abstained": true,
+      "group_hits": [],
+      "concept_ok": false,
+      "correct": true,
+      "verbatim": false
+    }
+  ]
+}

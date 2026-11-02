@@ -1,0 +1,505 @@
+{
+  "task_level": "Advanced",
+  "executed_training_myself": true,
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 20,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "max_seq_len": 512,
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "enable_thinking": false,
+    "dtype": "float32",
+    "eval_every_steps": 40,
+    "select_checkpoint": "lowest valid loss"
+  },
+  "gpu": "Tesla T4",
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "accelerate": "1.15.0",
+    "datasets": "5.1.0",
+    "torch": "2.11.0+cu130"
+  },
+  "data_counts": {
+    "glossary_terms": 58,
+    "raw_generated": 116,
+    "train": 58,
+    "valid": 58,
+    "test": 42,
+    "final_audit": 12
+  },
+  "training_seconds": 635.3980098260001,
+  "training_metrics": {
+    "train_runtime": 634.8714,
+    "train_samples_per_second": 1.827,
+    "train_steps_per_second": 0.252,
+    "train_loss": 0.40146357621997597,
+    "epoch": 20.0
+  },
+  "trainer_log_history": [
+    {
+      "loss": 2.5556571960449217,
+      "grad_norm": 2.6797430515289307,
+      "learning_rate": 0.0001998127873193367,
+      "entropy": 2.581474605359529,
+      "num_tokens": 9903.0,
+      "mean_token_accuracy": 0.5152468085289001,
+      "epoch": 1.2666666666666666,
+      "step": 10
+    },
+    {
+      "loss": 1.286264705657959,
+      "grad_norm": 1.646652340888977,
+      "learning_rate": 0.000196504026226914,
+      "entropy": 1.397431398692884,
+      "num_tokens": 19735.0,
+      "mean_token_accuracy": 0.7554030637992056,
+      "epoch": 2.533333333333333,
+      "step": 20
+    },
+    {
+      "loss": 0.9690855979919434,
+      "grad_norm": 2.5277929306030273,
+      "learning_rate": 0.0001891930808002694,
+      "entropy": 1.1380996296280308,
+      "num_tokens": 29700.0,
+      "mean_token_accuracy": 0.8053978085517883,
+      "epoch": 3.8,
+      "step": 30
+    },
+    {
+      "loss": 0.5914102554321289,
+      "grad_norm": 4.359107971191406,
+      "learning_rate": 0.000178183148246803,
+      "entropy": 0.8620846933788724,
+      "num_tokens": 38740.0,
+      "mean_token_accuracy": 0.8803454803095924,
+      "epoch": 5.0,
+      "step": 40
+    },
+    {
+      "eval_loss": 0.635083019733429,
+      "eval_runtime": 9.0577,
+      "eval_samples_per_second": 6.403,
+      "eval_steps_per_second": 0.883,
+      "eval_entropy": 0.7632343769073486,
+      "eval_num_tokens": 38740.0,
+      "eval_mean_token_accuracy": 0.8953573331236839,
+      "epoch": 5.0,
+      "step": 40
+    },
+    {
+      "loss": 0.3181978702545166,
+      "grad_norm": 1.945680022239685,
+      "learning_rate": 0.00016393082899355516,
+      "entropy": 0.6057593163691068,
+      "num_tokens": 48650.0,
+      "mean_token_accuracy": 0.9353051216978776,
+      "epoch": 6.266666666666667,
+      "step": 50
+    },
+    {
+      "loss": 0.1612801194190979,
+      "grad_norm": 1.5060514211654663,
+      "learning_rate": 0.0001470271906992737,
+      "entropy": 0.37670634059529556,
+      "num_tokens": 58415.0,
+      "mean_token_accuracy": 0.973953764689596,
+      "epoch": 7.533333333333333,
+      "step": 60
+    },
+    {
+      "loss": 0.10819076299667359,
+      "grad_norm": 1.054688811302185,
+      "learning_rate": 0.00012817325568414297,
+      "entropy": 0.2606871724128723,
+      "num_tokens": 68428.0,
+      "mean_token_accuracy": 0.9833018811125505,
+      "epoch": 8.8,
+      "step": 70
+    },
+    {
+      "loss": 0.06821659207344055,
+      "grad_norm": 3.5418524742126465,
+      "learning_rate": 0.00010815092835470633,
+      "entropy": 0.16687494930293825,
+      "num_tokens": 77480.0,
+      "mean_token_accuracy": 0.9908741745683882,
+      "epoch": 10.0,
+      "step": 80
+    },
+    {
+      "eval_loss": 0.3512916564941406,
+      "eval_runtime": 8.9607,
+      "eval_samples_per_second": 6.473,
+      "eval_steps_per_second": 0.893,
+      "eval_entropy": 0.169483482837677,
+      "eval_num_tokens": 77480.0,
+      "eval_mean_token_accuracy": 0.9727099761366844,
+      "epoch": 10.0,
+      "step": 80
+    },
+    {
+      "loss": 0.05876861214637756,
+      "grad_norm": 0.5735435485839844,
+      "learning_rate": 8.779056831258402e-05,
+      "entropy": 0.12827242361871818,
+      "num_tokens": 87414.0,
+      "mean_token_accuracy": 0.9909023171976993,
+      "epoch": 11.266666666666667,
+      "step": 90
+    },
+    {
+      "loss": 0.050622588396072386,
+      "grad_norm": 0.43722397089004517,
+      "learning_rate": 6.793655394472644e-05,
+      "entropy": 0.10894800134395298,
+      "num_tokens": 97246.0,
+      "mean_token_accuracy": 0.9912477825817309,
+      "epoch": 12.533333333333333,
+      "step": 100
+    },
+    {
+      "loss": 0.04768595397472382,
+      "grad_norm": 0.35346829891204834,
+      "learning_rate": 4.9412264631053216e-05,
+      "entropy": 0.09939605428984291,
+      "num_tokens": 107156.0,
+      "mean_token_accuracy": 0.9913554568039743,
+      "epoch": 13.8,
+      "step": 110
+    },
+    {
+      "loss": 0.04589824378490448,
+      "grad_norm": 0.73511803150177,
+      "learning_rate": 3.298593381624406e-05,
+      "entropy": 0.09049661581714948,
+      "num_tokens": 116220.0,
+      "mean_token_accuracy": 0.9913341932826572,
+      "epoch": 15.0,
+      "step": 120
+    },
+    {
+      "eval_loss": 0.32343876361846924,
+      "eval_runtime": 9.0111,
+      "eval_samples_per_second": 6.436,
+      "eval_steps_per_second": 0.888,
+      "eval_entropy": 0.11832815688103437,
+      "eval_num_tokens": 116220.0,
+      "eval_mean_token_accuracy": 0.9736223071813583,
+      "epoch": 15.0,
+      "step": 120
+    },
+    {
+      "loss": 0.041437044739723206,
+      "grad_norm": 0.33514711260795593,
+      "learning_rate": 1.9338789076247e-05,
+      "entropy": 0.0872550324389809,
+      "num_tokens": 126103.0,
+      "mean_token_accuracy": 0.9916522189190513,
+      "epoch": 16.266666666666666,
+      "step": 130
+    },
+    {
+      "loss": 0.04126674830913544,
+      "grad_norm": 0.3373408615589142,
+      "learning_rate": 9.036800464548157e-06,
+      "entropy": 0.08404533016054254,
+      "num_tokens": 135964.0,
+      "mean_token_accuracy": 0.9918090293281957,
+      "epoch": 17.533333333333335,
+      "step": 140
+    },
+    {
+      "loss": 0.039652314782142636,
+      "grad_norm": 0.3561399579048157,
+      "learning_rate": 2.5072087818176382e-06,
+      "entropy": 0.08375715268285651,
+      "num_tokens": 145860.0,
+      "mean_token_accuracy": 0.9920467671595121,
+      "epoch": 18.8,
+      "step": 150
+    },
+    {
+      "loss": 0.03978261351585388,
+      "grad_norm": 0.8048877120018005,
+      "learning_rate": 2.080718107935198e-08,
+      "entropy": 0.08331074524256918,
+      "num_tokens": 154960.0,
+      "mean_token_accuracy": 0.992012189494239,
+      "epoch": 20.0,
+      "step": 160
+    },
+    {
+      "eval_loss": 0.32485297322273254,
+      "eval_runtime": 8.9243,
+      "eval_samples_per_second": 6.499,
+      "eval_steps_per_second": 0.896,
+      "eval_entropy": 0.10971414297819138,
+      "eval_num_tokens": 154960.0,
+      "eval_mean_token_accuracy": 0.973983958363533,
+      "epoch": 20.0,
+      "step": 160
+    },
+    {
+      "train_runtime": 634.8714,
+      "train_samples_per_second": 1.827,
+      "train_steps_per_second": 0.252,
+      "total_flos": 528880693985280.0,
+      "train_loss": 0.40146357621997597,
+      "epoch": 20.0,
+      "step": 160
+    }
+  ],
+  "global_step": 160,
+  "trainable_params": 6389760,
+  "total_params": 758782784,
+  "before": {
+    "label": "before",
+    "n": 42,
+    "overall_rate": 0.19047619047619047,
+    "known_concept_rate": 0.05555555555555555,
+    "unknown_abstention_rate": 1.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 8,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "alias": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 2,
+        "rate": 0.16666666666666666
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 6,
+        "rate": 1.0
+      }
+    },
+    "seconds": 234.606
+  },
+  "after": {
+    "label": "after",
+    "n": 42,
+    "overall_rate": 0.47619047619047616,
+    "known_concept_rate": 0.5555555555555556,
+    "unknown_abstention_rate": 0.0,
+    "known_verbatim_rate": 0.3888888888888889,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 11,
+        "rate": 0.9166666666666666
+      },
+      "alias": {
+        "n": 12,
+        "correct": 5,
+        "rate": 0.4166666666666667
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 4,
+        "rate": 0.3333333333333333
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 0,
+        "rate": 0.0
+      }
+    },
+    "seconds": 142.391
+  },
+  "search": {
+    "label": "search",
+    "n": 42,
+    "overall_rate": 0.6666666666666666,
+    "known_concept_rate": 0.6666666666666666,
+    "unknown_abstention_rate": 0.6666666666666666,
+    "known_verbatim_rate": 0.6666666666666666,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 12,
+        "rate": 1.0
+      },
+      "alias": {
+        "n": 12,
+        "correct": 12,
+        "rate": 1.0
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 4,
+        "rate": 0.6666666666666666
+      }
+    },
+    "seconds": 0.102
+  },
+  "audit_before": {
+    "label": "audit_before",
+    "n": 12,
+    "overall_rate": 0.5,
+    "known_concept_rate": 0.0,
+    "unknown_abstention_rate": 1.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 1,
+    "by_kind": {
+      "canonical": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "alias": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 6,
+        "rate": 1.0
+      }
+    },
+    "seconds": 72.825
+  },
+  "audit_after": {
+    "label": "audit_after",
+    "n": 12,
+    "overall_rate": 0.16666666666666666,
+    "known_concept_rate": 0.3333333333333333,
+    "unknown_abstention_rate": 0.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 2,
+        "correct": 1,
+        "rate": 0.5
+      },
+      "alias": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 2,
+        "correct": 1,
+        "rate": 0.5
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 0,
+        "rate": 0.0
+      }
+    },
+    "seconds": 40.891
+  },
+  "audit_search": {
+    "label": "audit_search",
+    "n": 12,
+    "overall_rate": 0.6666666666666666,
+    "known_concept_rate": 0.6666666666666666,
+    "unknown_abstention_rate": 0.6666666666666666,
+    "known_verbatim_rate": 0.6666666666666666,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 2,
+        "correct": 2,
+        "rate": 1.0
+      },
+      "alias": {
+        "n": 2,
+        "correct": 2,
+        "rate": 1.0
+      },
+      "paraphrase": {
+        "n": 2,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 4,
+        "rate": 0.6666666666666666
+      }
+    },
+    "seconds": 0.025
+  },
+  "baseline_source": "Initial 5-epoch experiment's base-model outputs, copied unchanged. Two outputs rechecked before training.",
+  "baseline_rechecks": [
+    {
+      "id": "lora:canonical",
+      "matches_before": true,
+      "raw": "LoRA（Low-Rank Adaptation）は、AIE2026 の講座用語集に「低秩適応」という用語は記載されていません。\n\nただし、LoRA は大規模言語モデル（LLM）の学習において、**低秩（Low-Rank）なパラメータの調整**を行う手法です。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は"
+    },
+    {
+      "id": "default-model:canonical",
+      "matches_before": true,
+      "raw": "AIE2026 の講座用語集には、「既定モデル」という用語は記載されていません。\n\n確認が必要です。"
+    }
+  ],
+  "best_validation_loss": 0.32343876361846924,
+  "selected_checkpoint": "checkpoint-120",
+  "regressed_ids": [
+    "overfitting:paraphrase",
+    "unknown:バッチ正規化",
+    "unknown:ドロップアウト",
+    "unknown:Adam",
+    "unknown:量子ロラ同期器",
+    "unknown:ネオトークン同期器",
+    "unknown:プロンプト超越変換器"
+  ],
+  "adapter_disabled_checks": [
+    {
+      "id": "lora:canonical",
+      "matches_before": true,
+      "raw": "LoRA（Low-Rank Adaptation）は、AIE2026 の講座用語集に「低秩適応」という用語は記載されていません。\n\nただし、LoRA は大規模言語モデル（LLM）の学習において、**低秩（Low-Rank）なパラメータの調整**を行う手法です。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は"
+    },
+    {
+      "id": "default-model:canonical",
+      "matches_before": true,
+      "raw": "AIE2026 の講座用語集には、「既定モデル」という用語は記載されていません。\n\n確認が必要です。"
+    }
+  ],
+  "notes": [
+    "Known and unknown refer to membership in the provided course glossary, not all real-world knowledge.",
+    "Concept scoring is a preregistered keyword-group proxy; all raw outputs must also be reviewed.",
+    "The 58 terms occur in both train and valid; only question wording is held out.",
+    "The model receives no glossary definitions or index during inference; search reads the glossary directly.",
+    "Exploratory follow-up after the unsuccessful 5-epoch run: fixed 20 epochs, best checkpoint by valid loss every 40 steps.",
+    "The original 42 test outcomes were seen after the first run; the separate 12-question audit was fixed before this follow-up.",
+    "No unknown/refusal training examples; no data changes to train or valid between runs.",
+    "Data and operations assisted by Codex; no instructor result files used."
+  ]
+}

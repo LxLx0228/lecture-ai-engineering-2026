@@ -1,0 +1,21 @@
+{
+  "glossary_version": "2026-draft-1",
+  "terms": 58,
+  "generator": "scripts/make_sft_dataset.py (unmodified)",
+  "generator_sha256": "d048bac47de883d9c97ab9f24e912f54e086c508d509820866d6483d2a74635e",
+  "generated_rows": 116,
+  "train": 58,
+  "valid": 58,
+  "test": 42,
+  "split": "first template per term for train; second template for valid; all 58 terms shared",
+  "evaluation": "12 canonical + 12 unseen alias questions + 12 descriptive paraphrases + 6 out-of-glossary questions",
+  "training_unknown_examples": 0,
+  "input_knowledge": "No glossary definitions, known-term index, retrieved text, expected answers or gold concepts in inference prompts.",
+  "sha256": {
+    "eval_cases.json": "0f72714636d79d79b654dec0409f75fa103f75d8e826d51ee6af3db1ec69e897",
+    "glossary_sft.jsonl": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+    "glossary_snapshot.json": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+    "train.jsonl": "8d254ecaee560ee8630e2e150a92c91d6faf4be42381585cd55207d9f9abdd98",
+    "valid.jsonl": "9be82c5c7cdd34de25d9a8c895a13cc5d5aaeb55bfa74ae645302ed644234ac3"
+  }
+}

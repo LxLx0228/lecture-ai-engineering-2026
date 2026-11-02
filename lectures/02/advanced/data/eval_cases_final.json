@@ -1,0 +1,182 @@
+[
+  {
+    "id": "audit:token",
+    "kind": "canonical",
+    "term_id": "token",
+    "question": "用語集のトークンの意味と、料金計算との関係を教えてください。",
+    "expected_definition": "LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、コンテキストウィンドウの大きさは、多くの場合トークン数で数える。日本語は英語より1文字あたりのトークン数が多くなりやすい。",
+    "groups": [
+      [
+        "最小",
+        "単位"
+      ],
+      [
+        "断片",
+        "分割"
+      ],
+      [
+        "料金",
+        "レート"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "audit:learning-rate",
+    "kind": "alias",
+    "term_id": "learning-rate",
+    "question": "learning rateとは、更新のどの量を決めますか。大きすぎる場合と小さすぎる場合も説明してください。",
+    "expected_definition": "1回の更新でパラメータをどれだけ動かすかを決めるハイパーパラメータ。大きすぎると学習が不安定になり、小さすぎると進みが遅い。",
+    "groups": [
+      [
+        "更新"
+      ],
+      [
+        "パラメータ"
+      ],
+      [
+        "不安定"
+      ],
+      [
+        "遅い",
+        "遅く"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "audit:epoch",
+    "kind": "paraphrase",
+    "term_id": "epoch",
+    "question": "訓練データを最初から最後まで一巡して学習する回数の数え方を説明してください。",
+    "expected_definition": "学習データ全体を1周学習することを1エポックと数える。回数を増やしすぎると過学習しやすい。",
+    "groups": [
+      [
+        "学習データ"
+      ],
+      [
+        "全体"
+      ],
+      [
+        "1周",
+        "一周"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "audit:quantization",
+    "kind": "canonical",
+    "term_id": "quantization",
+    "question": "用語集の量子化とは、重みの表し方とメモリをどう変える処理ですか。",
+    "expected_definition": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
+    "groups": [
+      [
+        "重み"
+      ],
+      [
+        "ビット"
+      ],
+      [
+        "メモリ"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "audit:mcp",
+    "kind": "alias",
+    "term_id": "mcp",
+    "question": "講座でいうModel Context Protocolは、どことどこをつなぐための規約ですか。",
+    "expected_definition": "AIアプリと外部のツールやデータソースをつなぐためのオープンな標準プロトコル。MCPサーバーとして公開したツールは、対応する様々なエージェントやエディタ（MCPクライアント）から共通の方法で使える。第5回で、用語集の検索をMCPサーバーにして体験する。",
+    "groups": [
+      [
+        "外部"
+      ],
+      [
+        "ツール",
+        "データソース"
+      ],
+      [
+        "プロトコル",
+        "規約",
+        "標準"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "audit:fork",
+    "kind": "paraphrase",
+    "term_id": "fork",
+    "question": "講座のリポジトリを他人の所有のまま使わず、自分のアカウントへ丸ごとコピーする操作を説明してください。",
+    "expected_definition": "他人のrepoを自分のアカウントに丸ごとコピーすること。本講座では講座repoをforkし、自分のfork上で作業・提出する。",
+    "groups": [
+      [
+        "アカウント"
+      ],
+      [
+        "コピー"
+      ],
+      [
+        "fork",
+        "フォーク"
+      ]
+    ],
+    "expect_abstention": false
+  },
+  {
+    "id": "audit:unknown:層正規化",
+    "kind": "unknown",
+    "term_id": null,
+    "question": "AIE2026の用語集にある「層正規化」を定義してください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "audit:unknown:知識蒸留",
+    "kind": "unknown",
+    "term_id": null,
+    "question": "AIE2026の用語集にある「知識蒸留」を定義してください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "audit:unknown:CosmoRank接続器",
+    "kind": "unknown",
+    "term_id": null,
+    "question": "AIE2026の用語集にある「CosmoRank接続器」を定義してください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "audit:unknown:エポック逆転装置",
+    "kind": "unknown",
+    "term_id": null,
+    "question": "AIE2026の用語集にある「エポック逆転装置」を定義してください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "audit:unknown:MCP時間反転器",
+    "kind": "unknown",
+    "term_id": null,
+    "question": "AIE2026の用語集にある「MCP時間反転器」を定義してください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  },
+  {
+    "id": "audit:unknown:ゼロ温度圧縮鍵",
+    "kind": "unknown",
+    "term_id": null,
+    "question": "AIE2026の用語集にある「ゼロ温度圧縮鍵」を定義してください。",
+    "expected_definition": null,
+    "groups": [],
+    "expect_abstention": true
+  }
+]

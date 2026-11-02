@@ -1,0 +1,226 @@
+{
+  "task_level": "Advanced",
+  "executed_training_myself": true,
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 5,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "max_seq_len": 512,
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "enable_thinking": false,
+    "dtype": "float32"
+  },
+  "gpu": "Tesla T4",
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "accelerate": "1.15.0",
+    "datasets": "5.1.0",
+    "torch": "2.11.0+cu130"
+  },
+  "data_counts": {
+    "glossary_terms": 58,
+    "raw_generated": 116,
+    "train": 58,
+    "valid": 58,
+    "test": 42
+  },
+  "training_seconds": 149.9096712710001,
+  "training_metrics": {
+    "train_runtime": 149.4962,
+    "train_samples_per_second": 1.94,
+    "train_steps_per_second": 0.268,
+    "total_flos": 131711634367488.0,
+    "train_loss": 1.4359002351760863,
+    "epoch": 5.0
+  },
+  "trainer_log_history": [
+    {
+      "loss": 2.555916404724121,
+      "grad_norm": 2.687727212905884,
+      "learning_rate": 0.00019618256431728194,
+      "entropy": 2.581545585080197,
+      "num_tokens": 9903.0,
+      "mean_token_accuracy": 0.5153418246068453,
+      "epoch": 1.2666666666666666,
+      "step": 10
+    },
+    {
+      "loss": 1.2940513610839843,
+      "grad_norm": 1.6333383321762085,
+      "learning_rate": 0.00013612416661871533,
+      "entropy": 1.4033068606728,
+      "num_tokens": 19735.0,
+      "mean_token_accuracy": 0.7541647114251789,
+      "epoch": 2.533333333333333,
+      "step": 20
+    },
+    {
+      "loss": 1.0455756187438965,
+      "grad_norm": 1.7979816198349,
+      "learning_rate": 4.735678371226441e-05,
+      "entropy": 1.2380044523038363,
+      "num_tokens": 29700.0,
+      "mean_token_accuracy": 0.7908199053061636,
+      "epoch": 3.8,
+      "step": 30
+    },
+    {
+      "loss": 0.8480575561523438,
+      "grad_norm": 3.885934829711914,
+      "learning_rate": 4.2658237049655323e-07,
+      "entropy": 1.0811457236607869,
+      "num_tokens": 38740.0,
+      "mean_token_accuracy": 0.8274502091937594,
+      "epoch": 5.0,
+      "step": 40
+    },
+    {
+      "train_runtime": 149.4962,
+      "train_samples_per_second": 1.94,
+      "train_steps_per_second": 0.268,
+      "total_flos": 131711634367488.0,
+      "train_loss": 1.4359002351760863,
+      "epoch": 5.0,
+      "step": 40
+    }
+  ],
+  "global_step": 40,
+  "trainable_params": 6389760,
+  "total_params": 758782784,
+  "before": {
+    "label": "before",
+    "n": 42,
+    "overall_rate": 0.19047619047619047,
+    "known_concept_rate": 0.05555555555555555,
+    "unknown_abstention_rate": 1.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 8,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "alias": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 2,
+        "rate": 0.16666666666666666
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 6,
+        "rate": 1.0
+      }
+    },
+    "seconds": 234.606
+  },
+  "after": {
+    "label": "after",
+    "n": 42,
+    "overall_rate": 0.07142857142857142,
+    "known_concept_rate": 0.08333333333333333,
+    "unknown_abstention_rate": 0.0,
+    "known_verbatim_rate": 0.0,
+    "truncated_count": 3,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 2,
+        "rate": 0.16666666666666666
+      },
+      "alias": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 1,
+        "rate": 0.08333333333333333
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 0,
+        "rate": 0.0
+      }
+    },
+    "seconds": 164.473
+  },
+  "search": {
+    "label": "search",
+    "n": 42,
+    "overall_rate": 0.6666666666666666,
+    "known_concept_rate": 0.6666666666666666,
+    "unknown_abstention_rate": 0.6666666666666666,
+    "known_verbatim_rate": 0.6666666666666666,
+    "truncated_count": 0,
+    "by_kind": {
+      "canonical": {
+        "n": 12,
+        "correct": 12,
+        "rate": 1.0
+      },
+      "alias": {
+        "n": 12,
+        "correct": 12,
+        "rate": 1.0
+      },
+      "paraphrase": {
+        "n": 12,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "unknown": {
+        "n": 6,
+        "correct": 4,
+        "rate": 0.6666666666666666
+      }
+    },
+    "seconds": 0.108
+  },
+  "regressed_ids": [
+    "overfitting:paraphrase",
+    "unknown:バッチ正規化",
+    "unknown:ドロップアウト",
+    "unknown:Adam",
+    "unknown:量子ロラ同期器",
+    "unknown:ネオトークン同期器",
+    "unknown:プロンプト超越変換器"
+  ],
+  "adapter_disabled_checks": [
+    {
+      "id": "lora:canonical",
+      "matches_before": true,
+      "raw": "LoRA（Low-Rank Adaptation）は、AIE2026 の講座用語集に「低秩適応」という用語は記載されていません。\n\nただし、LoRA は大規模言語モデル（LLM）の学習において、**低秩（Low-Rank）なパラメータの調整**を行う手法です。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は、モデルの学習初期段階から、モデルの構造や表現を学習する際に、**低秩な変換（変換変数）を適用**することで、学習効率を向上させ、モデルの表現をよりシンプルかつ効率的に学習させるアプローチです。\n\nLoRA は"
+    },
+    {
+      "id": "default-model:canonical",
+      "matches_before": true,
+      "raw": "AIE2026 の講座用語集には、「既定モデル」という用語は記載されていません。\n\n確認が必要です。"
+    }
+  ],
+  "notes": [
+    "Known and unknown refer to membership in the provided course glossary, not all real-world knowledge.",
+    "Concept scoring is a preregistered keyword-group proxy; all raw outputs must also be reviewed.",
+    "The 58 terms occur in both train and valid; only question wording is held out.",
+    "The model receives no glossary definitions or index during inference; search reads the glossary directly.",
+    "No regular validation or early stopping; one fixed 5-epoch run. No unknown/refusal training examples.",
+    "Data and operations assisted by Codex; no instructor result files used."
+  ]
+}

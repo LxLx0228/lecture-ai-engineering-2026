@@ -1,0 +1,10 @@
+{
+  "executed_date_jst": "2026-11-02",
+  "source_upstream_commit": "fae899a",
+  "submission_branch_base": "662cddd52724b330f3f4cd15123d1e55cb474874",
+  "execution": "Colab free Tesla T4, one training run",
+  "capture": "Colab code cell printed the saved files verbatim. Read rendered output and wrote the eight files locally. All eight SHA256 hashes matched the runtime output.",
+  "notebook_export_note": "Colab output JavaScript failed to render some original widgets and the downloaded notebook contains stale widget progress / null execution_count in some earlier cells. Saved result.json, eval_before.json, eval_after.json and final export-cell output are the complete result evidence; no execution counts or generated outputs were fabricated.",
+  "runtime": "Disconnected and deleted after result capture; adapter weights not included in submission.",
+  "ai_assistance": "Codex assisted data design, code edits, Colab operation, verification, and report drafting."
+}

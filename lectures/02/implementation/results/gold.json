@@ -1,0 +1,140 @@
+{
+  "体験会の日程は？": {
+    "needs_review": false,
+    "must_include": [
+      "12 月 6 日",
+      "13:00",
+      "16:00"
+    ]
+  },
+  "開催時間の開始と終了、それから日付を知りたいです": {
+    "needs_review": false,
+    "must_include": [
+      "12 月 6 日",
+      "13:00",
+      "16:00"
+    ]
+  },
+  "いつ現地に行けば体験会に参加できますか": {
+    "needs_review": false,
+    "must_include": [
+      "12 月 6 日",
+      "13:00",
+      "16:00"
+    ]
+  },
+  "入場料は必要ですか": {
+    "needs_review": false,
+    "must_include": [
+      "無料"
+    ]
+  },
+  "体験会に入るための支払いは発生しますか": {
+    "needs_review": false,
+    "must_include": [
+      "無料"
+    ]
+  },
+  "参加料金は有料か無料か教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "無料"
+    ]
+  },
+  "予約方法は？": {
+    "needs_review": false,
+    "must_include": [
+      "専用フォーム",
+      "20 名"
+    ]
+  },
+  "専用の申込み手続きと人数の上限について知りたいです": {
+    "needs_review": false,
+    "must_include": [
+      "専用フォーム",
+      "20 名"
+    ]
+  },
+  "何人まで参加できて、どう予約しますか": {
+    "needs_review": false,
+    "must_include": [
+      "専用フォーム",
+      "20 名"
+    ]
+  },
+  "パソコンは持参必須ですか": {
+    "needs_review": false,
+    "must_include": [
+      "PC",
+      "任意"
+    ]
+  },
+  "手持ちのパソコンがなくても会場で遊べますか": {
+    "needs_review": false,
+    "must_include": [
+      "PC",
+      "任意"
+    ]
+  },
+  "自分の PC の持ち込み義務と会場の機材について教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "PC",
+      "任意"
+    ]
+  },
+  "試遊時間は？": {
+    "needs_review": false,
+    "must_include": [
+      "15 分"
+    ]
+  },
+  "1 人が 1 回プレイできる長さは何分でしょうか": {
+    "needs_review": false,
+    "must_include": [
+      "15 分"
+    ]
+  },
+  "試遊の 1 枠に割り当てられる時間を教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "15 分"
+    ]
+  },
+  "駐車場はありますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "ゲームは英語に対応していますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "会場への最寄り駅を教えてください": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "予約をキャンセルする方法は何ですか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "参加者の写真撮影は認められていますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "支払う交通費も無料になりますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  }
+}
