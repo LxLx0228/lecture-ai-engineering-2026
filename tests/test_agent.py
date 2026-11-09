@@ -5,11 +5,13 @@ TestModel は実際のLLMを呼ばない偽モデルで、登録されたツー�
 「ツールが登録され、呼ばれ、結果がモデルに戻るか」を確かめられる。
 """
 
+import pytest
 from pydantic_ai import DeferredToolRequests
 from pydantic_ai.messages import ToolCallPart, ToolReturnPart
 from pydantic_ai.models.test import TestModel
 
-from app.agent import agent
+from app import tools
+from app.agent import agent, run_question
 
 BASE_TOOLS = {"search_glossary", "get_lecture_summary"}
 
@@ -40,3 +42,23 @@ def test_glossary_result_reaches_the_model():
         result = agent.run_sync("RAGとは？")
     returns = _parts(result, ToolReturnPart)
     assert returns and returns[0].tool_name == "search_glossary"
+
+
+@pytest.mark.parametrize("answer, saved", [("y", True), ("", False)])
+def test_learning_log_is_saved_only_after_approval(monkeypatch, tmp_path, answer, saved):
+    monkeypatch.setattr(tools, "LEARNING_LOG_DIR", tmp_path / "learning_log")
+
+    def confirm(prompt):
+        assert "summary" in prompt
+        assert not tools.LEARNING_LOG_DIR.exists()
+        return answer
+
+    monkeypatch.setattr("builtins.input", confirm)
+    result = run_question(agent, "学習記録を保存して", TestModel(call_tools=["save_learning_log"]))
+
+    logs = list(tools.LEARNING_LOG_DIR.glob("*.md"))
+    assert len(logs) == int(saved)
+    assert isinstance(result.output, str)
+    if saved:
+        summary = _parts(result, ToolCallPart)[0].args_as_dict()["summary"]
+        assert logs[0].read_text(encoding="utf-8") == f"# 学習記録\n\n{summary.strip()}\n"

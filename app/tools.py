@@ -5,10 +5,15 @@
 """
 
 import json
+import os
+import random
+from datetime import datetime, timezone
 from functools import cache
 from pathlib import Path
+from tempfile import NamedTemporaryFile
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+LEARNING_LOG_DIR = DATA_DIR.parent / "learning_log"
 MAX_RESULTS = 3
 
 
@@ -77,3 +82,49 @@ def get_lecture_summary(lecture: int) -> str:
         available = sorted(p.stem for p in (DATA_DIR / "lectures").glob("*.md"))
         return f"第{lecture}回の要点はまだありません。用意されている回: {', '.join(available)}"
     return path.read_text(encoding="utf-8")
+
+
+def make_quiz(lecture: int) -> str:
+    """指定した回の確認問題や小テストを求められたときに使う。
+
+    lecture は1始まりの講義回。用語集から問題と答えを1組返す。
+    出題時は問題だけを表示し、答えは学習者が回答するまで明かさない。
+    """
+    terms = [entry for entry in load_glossary() if entry["lecture"] == lecture]
+    if not terms:
+        return f"第{lecture}回の用語が見つからないため、確認問題を作れません。"
+    entry = random.choice(terms)
+    return json.dumps(
+        {"question": f"「{entry['term']}」の意味は？", "answer": entry["definition"]},
+        ensure_ascii=False,
+    )
+
+
+def save_learning_log(summary: str) -> str:
+    """利用者が学習記録の保存を求めたとき、学んだことの要約を保存する。
+
+    summary は保存する記録の本文。既存の記録を上書きせず、1件ずつ保存する。
+    """
+    summary = summary.strip()
+    if not summary:
+        return "学習記録の本文が空のため、保存できません。"
+
+    LEARNING_LOG_DIR.mkdir(parents=True, exist_ok=True)
+    now = datetime.now(timezone.utc)
+    file = NamedTemporaryFile(
+        mode="w",
+        encoding="utf-8",
+        dir=LEARNING_LOG_DIR,
+        prefix=now.strftime("%Y%m%dT%H%M%SZ-"),
+        suffix=".tmp",
+        delete=False,
+    )
+    temporary_path = Path(file.name)
+    log_path = temporary_path.with_suffix(".md")
+    try:
+        with file:
+            file.write(f"# 学習記録\n\n{summary}\n")
+        os.link(temporary_path, log_path)
+    finally:
+        temporary_path.unlink(missing_ok=True)
+    return f"学習記録を learning_log/{log_path.name} に保存しました。"
