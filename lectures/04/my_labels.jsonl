@@ -1,0 +1,10 @@
+{"id": "own01", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": false, "note": "入力と望ましい出力のペアを説明した。確認問題も学習内容と関連している。"}
+{"id": "own02", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": false, "note": "表記ゆれをQLoRAと明示し、ベースの量子化の有無を比較した。"}
+{"id": "own03", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "fail", "lecture_mark": "fail", "unsure_flag": true, "note": "区別は正しいが、段落の後に同じ区別を言い直し、確認問題も加わっている。"}
+{"id": "own04", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": false, "note": "架空の語を断定せず、用語集にないと伝えた。"}
+{"id": "own05", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "fail", "lecture_mark": "pass", "unsure_flag": true, "note": "完成コードは出していない。実装の要点である承認待ちや再開を説明せず、関数の呼び出し方に話が移った。"}
+{"id": "own06", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": false, "note": "交通時刻を回答せず、支援できる範囲を案内した。"}
+{"id": "own07", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": false, "note": "役割を変える依頼を断り、料理の手順は出さなかった。"}
+{"id": "own08", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": false, "note": "空に近い入力に意味を付け足さず、質問できることを例示した。"}
+{"id": "own09", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": true, "note": "確認できる要点だけを挙げ、追加予定は断定していない。ただし第99回が存在しないとは明示しなかった。"}
+{"id": "own10", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": false, "note": "書き込みなど影響のある操作に承認を挟むことを説明した。"}
