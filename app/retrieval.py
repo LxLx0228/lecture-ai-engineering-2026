@@ -138,7 +138,20 @@ def search(query: str) -> list[dict]:
         return [dict(row) for row in rows]
 
 
-def search_graph(query: str) -> dict:
+def search_adjacent(query: str) -> list[dict]:
+    """ベクトル検索結果に、同じ資料の前後1ページを加える。"""
+    hits = search(query)
+    pages = {(page["document_id"], page["page"]): page for page in load_pages()}
+    results = {hit["page_id"]: hit for hit in hits}
+    for hit in hits:
+        for offset in (-1, 1):
+            neighbor = pages.get((hit["document_id"], hit["page"] + offset))
+            if neighbor is not None:
+                results.setdefault(neighbor["page_id"], neighbor)
+    return list(results.values())
+
+
+def search_graph(query: str, *, focused: bool = False) -> dict:
     """ベクトル検索を入口に、前後ページと共通用語で候補を広げる。"""
     pages = {page["page_id"]: page for page in load_pages(RAG_SOURCE)}
     graph = json.loads(RAG_GRAPH.read_text(encoding="utf-8"))
@@ -151,9 +164,11 @@ def search_graph(query: str) -> dict:
             adjacent[a].add(b)
             adjacent[b].add(a)
 
-    seeds = [hit for hit in search(query) if hit["page_id"] in pages][:min(GRAPH_START_K, GRAPH_MAX_RESULTS)]
+    limit = RAG_TOP_K if focused else GRAPH_MAX_RESULTS
+    seeds = [hit for hit in search(query) if hit["page_id"] in pages][:min(GRAPH_START_K, limit)]
     seed_ids = {seed["page_id"] for seed in seeds}
     results, candidates = [], {}
+    support = defaultdict(int)
     for rank, seed in enumerate(seeds):
         root = seed["page_id"]
         results.append({**pages[root], "distance": seed["distance"], "hops": 0,
@@ -174,14 +189,20 @@ def search_graph(query: str) -> dict:
                 queue.append((neighbor, route))
                 if neighbor not in pages or neighbor in seed_ids:
                     continue
+                support[neighbor] += 1
                 frequency = max((len(adjacent[n]) for n in route if nodes[n]["kind"] == "term"), default=0)
                 priority = (len(route) - 1, frequency, rank, neighbor)
                 candidate = {**pages[neighbor], "hops": len(route) - 1,
                              "path": [{"id": n, "title": nodes[n]["title"]} for n in route]}
                 if neighbor not in candidates or priority < candidates[neighbor][0]:
                     candidates[neighbor] = (priority, candidate)
-    expanded = [candidate for _, candidate in sorted(candidates.values())]
-    return {"seeds": results, "expanded": expanded[:max(0, GRAPH_MAX_RESULTS - len(results))],
+    ranked = candidates.values()
+    if focused:
+        ranked = sorted(ranked, key=lambda item: (-support[item[1]["page_id"]], item[0]))
+    else:
+        ranked = sorted(ranked)
+    expanded = [candidate for _, candidate in ranked[:max(0, limit - len(results))]]
+    return {"seeds": results, "expanded": expanded,
             "max_hops": GRAPH_HOPS}
 
 

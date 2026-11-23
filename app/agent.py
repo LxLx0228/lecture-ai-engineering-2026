@@ -163,6 +163,15 @@ def print_trace(result, elapsed_seconds: float | None = None) -> None:
                                 print(f"      {child['content']}")
                         if not data["children"]:
                             print(f"    （末端ページ・本文{len(node.get('content', ''))}文字を取得）")
+                elif part.tool_name in {"search_materials", "search_adjacent", "search_graph", "search_focused_graph"}:
+                    data = json.loads(part.content)
+                    if "error" in data:
+                        print(f"[tool return] {part.tool_name} -> {data['error']}")
+                    else:
+                        for key in ("results", "seeds", "expanded"):
+                            if key in data:
+                                ids = ", ".join(page["page_id"] for page in data[key])
+                                print(f"[tool return] {part.tool_name} {key} -> {ids}")
                 else:
                     print(f"[tool return] {part.tool_name} -> {str(part.content)[:120]}…")
     usage = result.usage
@@ -180,6 +189,8 @@ def main() -> None:
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument("--mcp", action="store_true", help="第5回: ツールを MCP サーバー（app/mcp_servers.json）から受け取る")
     modes.add_argument("--graph", action="store_true", help="検索結果からグラフをたどり、候補ページを読んで答える")
+    modes.add_argument("--adjacent", action="store_true", help="検索結果と同じ資料の前後1ページを読む")
+    modes.add_argument("--focused-graph", action="store_true", help="複数の起点から到達するページを優先するGraph検索")
     modes.add_argument("--tree", action="store_true", help="目次をたどり、必要なページを読んで答える")
     modes.add_argument("--full-context", action="store_true", help="検索せず、lectures.jsonの全資料を一度に渡す")
     parser.add_argument("--list-tools", action="store_true", help="モデルに見えるツール一覧を表示して終了する（APIキー不要）")
@@ -191,6 +202,16 @@ def main() -> None:
         mode = target.override(instructions=TREE_INSTRUCTIONS, tools=[tools.browse_tree])
     elif args.graph:
         mode = target.override(instructions=GRAPH_INSTRUCTIONS, tools=[tools.search_graph])
+    elif args.adjacent:
+        mode = target.override(
+            instructions=INSTRUCTIONS.replace("search_materials", "search_adjacent"),
+            tools=[tools.search_adjacent],
+        )
+    elif args.focused_graph:
+        mode = target.override(
+            instructions=GRAPH_INSTRUCTIONS.replace("search_graph", "search_focused_graph"),
+            tools=[tools.search_focused_graph],
+        )
     with mode:
         if args.list_tools:
             if args.full_context:

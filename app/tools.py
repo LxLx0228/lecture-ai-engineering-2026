@@ -86,9 +86,21 @@ def search_materials(query: str) -> str:
 
     queryに調べたい内容を指定する。
     """
+    from app.retrieval import search
+
+    return _search_results(search, query)
+
+
+def search_adjacent(query: str) -> str:
+    """第1〜3回の関連ページと、同じ資料の前後1ページの本文・引用情報を返す。"""
+    from app.retrieval import search_adjacent as search
+
+    return _search_results(search, query)
+
+
+def _search_results(search, query: str) -> str:
     from google.genai.errors import APIError
     import sqlite3
-    from app.retrieval import search
 
     try:
         return json.dumps({"results": search(query)}, ensure_ascii=False)
@@ -116,12 +128,21 @@ def search_graph(query: str) -> str:
 
     queryに調べたい内容を指定する。
     """
+    return _search_graph(query, focused=False)
+
+
+def search_focused_graph(query: str) -> str:
+    """関連ページを起点に、複数の起点からつながる資料の本文と引用情報を優先して返す。"""
+    return _search_graph(query, focused=True)
+
+
+def _search_graph(query: str, *, focused: bool) -> str:
     import sqlite3
     from google.genai.errors import APIError
     from app.retrieval import search_graph as search
 
     try:
-        return json.dumps(search(query), ensure_ascii=False)
+        return json.dumps(search(query, focused=focused), ensure_ascii=False)
     except (ValueError, OSError, sqlite3.Error) as e:
         return json.dumps({"error": str(e)}, ensure_ascii=False)
     except APIError as e:
